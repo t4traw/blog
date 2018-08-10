@@ -1,6 +1,8 @@
 baseURL = "/"
 languageCode = "ja-ja"
 title = "lightly"
+canonifyURLs=false
+relativeURLs=true
 
 [build]
   command = "yarn build"

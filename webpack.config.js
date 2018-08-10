@@ -54,22 +54,13 @@ module.exports = () => {
         path.resolve(__dirname, 'static'),
         path.resolve(__dirname, 'public')
       ]),
-
-      // Run hugo command after build
       new shellPlugin({
         onBuildEnd: [env.command]
       }),
-
-			/*
-			Creates manifest file for cachebustable assets
-			Leave this plugin to the last, so it can be 'popped' for dev env, otherwise
-			hugo will unnecessarily rebuild the site for each webpack build
-			*/
       new manifestPlugin({
         fileName: '../data/manifest.json',
       }),
     ],
-
     module: {
       rules: [{
         test: /\.(css|scss|sass)$/,
@@ -82,34 +73,5 @@ module.exports = () => {
       }]
     }
   };
-
   return config;
-
-
-  // mode: 'development',
-  // entry: [
-  //   './assets/javascripts/index.js'
-  // ],
-  // output: {
-  //   path: __dirname + '/.tmp/dist',
-  //   filename: 'javascripts/bundle.js'
-  // },
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.(sass|scss)$/,
-  //       use: [
-  //         "style-loader",
-  //         "css-loader",
-  //         "postcss-loader",
-  //         "sass-loader"
-  //       ]
-  //     },
-  //   ]
-  // },
-  // plugins: [
-  //   new WebpackShellPlugin({
-  //     onBuildEnd: this.mode === 'production' ? hugoProduction : hugoDev
-  //   })
-  // ]
 };
