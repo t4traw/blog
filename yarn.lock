@@ -1321,10 +1321,6 @@ define-property@^2.0.2:
     is-descriptor "^1.0.2"
     isobject "^3.0.1"
 
-defined@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
-
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
@@ -4219,12 +4215,9 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-scrolltrigger@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/scrolltrigger/-/scrolltrigger-1.0.1.tgz#ab976be51afd7cdc0e8f90f6be929c8acc0b717c"
-  dependencies:
-    defined "^1.0.0"
-    xtend "^4.0.1"
+scrolltrigger-classes@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/scrolltrigger-classes/-/scrolltrigger-classes-0.3.6.tgz#7edae82745f093609d8d82c5d7e5e8307f136fa2"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
@@ -5252,7 +5245,7 @@ xregexp@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/xregexp/-/xregexp-4.0.0.tgz#e698189de49dd2a18cc5687b05e17c8e43943020"
 
-xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
+xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 

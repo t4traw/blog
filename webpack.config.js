@@ -5,10 +5,6 @@ const shellPlugin = require('webpack-shell-plugin');
 const manifestPlugin = require('webpack-manifest-plugin');
 
 const hugoSrc = path.resolve(__dirname, "site");
-const dest = path.resolve(__dirname, ".tmp");
-
-const hugoDev = `hugo --buildDrafts --watch --source ${hugoSrc} --destination ${dest}`;
-const hugoProduction = `hugo --source ${hugoSrc} --destination ${dest}`;
 
 function set() {
   switch (process.env.APP_ENV) {
@@ -51,7 +47,6 @@ module.exports = () => {
 
     plugins: [
       new CleanPlugin([
-        path.resolve(__dirname, 'static'),
         path.resolve(__dirname, 'public')
       ]),
       new shellPlugin({
