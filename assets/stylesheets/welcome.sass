@@ -1,0 +1,76 @@
+section
+  width: 85vw
+  max-width: 800px
+  margin: 0 auto
+
+  .first_view
+    height: 50vh
+    // PC
+    @media screen and (min-width: $tablet_width + 1px)
+      padding-top: 60px
+    // Tablet
+    @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
+      padding-top: 45px
+    // Smartphone
+    @media screen and (max-width: $smartphone_width)
+      padding-top: 30px
+    p
+      margin-bottom: 10px
+      @media screen and (min-width: $tablet_width + 1px)
+        font-size: 24px
+      // Tablet
+      @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
+        font-size: 20px
+      // Smartphone
+      @media screen and (max-width: $smartphone_width)
+        font-size: 18px
+    .question
+      +fadein(0.5s)
+      $question_color: #5af5a7
+      font-weight: bold
+      background-color: $question_color
+      // display: inline
+      padding: 10px
+      &::before
+        content: ''
+        position: absolute
+        display: block
+        width: 0
+        height: 0
+        left: -15px
+        top: 12px
+        border-right: 15px solid $question_color
+        border-top: 15px solid transparent
+        border-bottom: 15px solid transparent
+    .answer
+      +fadein(1.5s)
+      font-weight: bold
+      background-color: #fff
+      // display: inline
+      padding: 10px
+      &::before
+        content: ''
+        position: absolute
+        display: block
+        width: 0
+        height: 0
+        right: -15px
+        top: 12px
+        border-left: 15px solid #fff
+        border-top: 15px solid transparent
+        border-bottom: 15px solid transparent
+    .msg
+      +fadein(2.5s)
+      @media screen and (min-width: $tablet_width + 1px)
+        font-size: 24px
+        margin-top: 24px
+      @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
+        font-size: 20px
+        margin-top: 20px
+      @media screen and (max-width: $smartphone_width)
+        font-size: 18px
+        margin-top: 18px
+        
+  .as_light_as
+    margin-top: 30px
+  .slide

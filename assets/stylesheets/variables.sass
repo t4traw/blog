@@ -1,0 +1,24 @@
+$brand_color: #629cff
+$brand_grad: linear-gradient(200deg, $brand_color, adjust-hue($brand_color, 20%))
+
+=background-gradation($angle: 180deg, $color-a: #0bd, $color-b: 20%)
+  background: linear-gradient($angle, $color-a, $color-b)
+
+$pc_width: 1120px
+$tablet_width: 768px
+$smartphone_width: 414px
+  
+// PC
+// @media screen and (min-width: $tablet_width + 1px)
+// Tablet
+// @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
+// Smartphone
+// @media screen and (max-width: $smartphone_width)
+
+@keyframes transparent
+  100%
+    opacity: 1
+
+=fadein($time)
+  opacity: 0
+  animation: transparent 0.5s ease $time 1 forwards

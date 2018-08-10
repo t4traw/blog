@@ -1,0 +1,7 @@
+baseURL = "/"
+languageCode = "ja-ja"
+title = "lightly"
+
+[build]
+  command = "yarn build"
+  publish = "dist"
