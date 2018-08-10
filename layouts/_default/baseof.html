@@ -5,6 +5,7 @@
     <title>{{ block "title" . }}
       {{ .Site.Title }}
     {{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script type="text/javascript" src="{{ if eq (getenv "APP_ENV") "dev" }}main.js{{ else }}{{ index .Site.Data.manifest "main.js" | relURL }}{{ end }}"></script>
   </head>
   <body>
