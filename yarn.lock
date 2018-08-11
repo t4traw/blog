@@ -2281,6 +2281,10 @@ inquirer@^6.0.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
+instantclick@^3.1.0-2:
+  version "3.1.0-2"
+  resolved "https://registry.yarnpkg.com/instantclick/-/instantclick-3.1.0-2.tgz#b079e1c93cb9cc543998c63799f68efa3f01acdd"
+
 interpret@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
