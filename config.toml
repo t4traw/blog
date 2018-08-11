@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = ""
 languageCode = "ja-ja"
 title = "lightly"
 canonifyURLs=false
