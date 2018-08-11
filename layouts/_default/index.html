@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <h1>豊橋市を中心にWEBアプリケーション・ホームページ制作を親身になって制作するlightly</h1>
+  <div class="columns">
+    {{ range where .Pages "Section" "blog" }}
+    <div class="column is-narrow is-4">
+      <a href="{{.Permalink}}">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              {{ if .Params.Image }}
+                <img src="{{ .Params.Image }}">
+              {{ else }}
+                <img src="https://bulma.io/images/placeholders/1280x960.png">
+              {{ end }}
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title">{{ .Title }}</p>
+              </div>
+            </div>
+            <div class="content">
+              {{ .Content }}
+              <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+    <article>
+      <h2></h2>
+      {{ .Content }}
+    </article>
+{{ end }}

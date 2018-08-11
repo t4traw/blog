@@ -4,6 +4,9 @@ title = "lightly"
 canonifyURLs=false
 relativeURLs=true
 
+[permalinks]
+  post= "/:section/:title"
+
 [build]
   command = "yarn build"
   publish = "dist"

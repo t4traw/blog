@@ -1,5 +1,6 @@
 ---
-title: About The Site
-permalink: about
+title: "ここはあばうとなページ"
+date: 2018-08-12T01:37:51+09:00
+image: ""
 ---
-lorem
+あばうとなかんじなんです
