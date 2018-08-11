@@ -1,3 +1,4 @@
 {
-  "main.js": "main.js"
+  "bundle.js": "bundle.js",
+  "later.js": "later.js"
 }

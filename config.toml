@@ -5,4 +5,8 @@ canonifyURLs=false
 relativeURLs=true
 
 [permalinks]
-  post= "/:section/:title"
+  blog = "/:section/:title"
+
+[build]
+  command = "yarn build"
+  publish = "dist"

@@ -36,7 +36,7 @@ module.exports = () => {
     },
 
     entry: {
-      main: path.resolve(__dirname, 'assets', 'javascripts', 'index.js'),
+      bundle: path.resolve(__dirname, 'assets', 'javascripts', 'index.js'),
     },
 
     output: {
