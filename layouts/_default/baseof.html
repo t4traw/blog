@@ -11,8 +11,9 @@
   </head>
   <body>
     {{ partial "header.html" . }}
-    {{ block "main" . }}
-    {{ end }}
+    <div class="main_container">
+      {{ block "main" . }}{{ end }}
+    </div>
     {{ partial "footer.html" . }}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.js" data-no-instant></script>
     <script data-no-instant>InstantClick.init();</script>

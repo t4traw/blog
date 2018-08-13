@@ -1,76 +1,132 @@
+#welcome
+  h1
+    border-top: 1px solid #c5c5c5
+    border-bottom: 1px solid #c5c5c5
+    padding: 10px
+    margin: 30px 0 50px
+    text-align: center
+  h2
+    margin: 50px 0 30px
+    text-align: center
+    span
+      position: relative
+      display: inline-block
+      padding-bottom: 0.5em
+      border-bottom: 1px solid black
+      &::before, &::after 
+        position: absolute
+        top: 100%
+        left: 50%
+        transform: translateX(-50%)
+        content: ''
+        border: 10px solid transparent
+      &::before
+        border-top: 10px solid black
+      &::after
+        margin-top: -1px
+        border-top: 10px solid white
+
+.main_container
+  display: inherit
+  margin: 0 auto
+  width: 100%
+  max-width: $pc_width
+
 section
   width: 85vw
   max-width: 800px
   margin: 0 auto
 
-  .first_view
-    height: 50vh
-    // PC
+.card
+  box-shadow: none
+  .card-image
+    .image
+      overflow: hidden
+      width: 100%
+      height: 150px
+      position: relative
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        height: auto
+  .card-content
+    padding: 8px
+    .media
+      .media-content
+        .title
+          font-size: 1rem
+
+.first_view
+  height: 50vh
+  // PC
+  @media screen and (min-width: $tablet_width + 1px)
+    padding-top: 60px
+  // Tablet
+  @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
+    padding-top: 45px
+  // Smartphone
+  @media screen and (max-width: $smartphone_width)
+    padding-top: 30px
+  p
+    margin-bottom: 10px
     @media screen and (min-width: $tablet_width + 1px)
-      padding-top: 60px
+      font-size: 24px
     // Tablet
     @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
-      padding-top: 45px
+      font-size: 20px
     // Smartphone
     @media screen and (max-width: $smartphone_width)
-      padding-top: 30px
-    p
-      margin-bottom: 10px
-      @media screen and (min-width: $tablet_width + 1px)
-        font-size: 24px
-      // Tablet
-      @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
-        font-size: 20px
-      // Smartphone
-      @media screen and (max-width: $smartphone_width)
-        font-size: 18px
-    .question
-      +fadein(0.5s)
-      $question_color: #5af5a7
-      font-weight: bold
-      background-color: $question_color
-      // display: inline
-      padding: 10px
-      &::before
-        content: ''
-        position: absolute
-        display: block
-        width: 0
-        height: 0
-        left: -15px
-        top: 12px
-        border-right: 15px solid $question_color
-        border-top: 15px solid transparent
-        border-bottom: 15px solid transparent
-    .answer
-      +fadein(1.5s)
-      font-weight: bold
-      background-color: #fff
-      // display: inline
-      padding: 10px
-      &::before
-        content: ''
-        position: absolute
-        display: block
-        width: 0
-        height: 0
-        right: -15px
-        top: 12px
-        border-left: 15px solid #fff
-        border-top: 15px solid transparent
-        border-bottom: 15px solid transparent
-    .msg
-      +fadein(2.5s)
-      @media screen and (min-width: $tablet_width + 1px)
-        font-size: 24px
-        margin-top: 24px
-      @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
-        font-size: 20px
-        margin-top: 20px
-      @media screen and (max-width: $smartphone_width)
-        font-size: 18px
-        margin-top: 18px
-        
+      font-size: 18px
+  .question
+    +fadein(0.5s)
+    $question_color: #5af5a7
+    font-weight: bold
+    background-color: $question_color
+    // display: inline
+    padding: 10px
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      width: 0
+      height: 0
+      left: -15px
+      top: 12px
+      border-right: 15px solid $question_color
+      border-top: 15px solid transparent
+      border-bottom: 15px solid transparent
+  .answer
+    +fadein(1.5s)
+    font-weight: bold
+    background-color: #fff
+    // display: inline
+    padding: 10px
+    &::before
+      content: ''
+      position: absolute
+      display: block
+      width: 0
+      height: 0
+      right: -15px
+      top: 12px
+      border-left: 15px solid #fff
+      border-top: 15px solid transparent
+      border-bottom: 15px solid transparent
+  .msg
+    +fadein(2.5s)
+    @media screen and (min-width: $tablet_width + 1px)
+      font-size: 24px
+      margin-top: 24px
+    @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
+      font-size: 20px
+      margin-top: 20px
+    @media screen and (max-width: $smartphone_width)
+      font-size: 18px
+      margin-top: 18px
+      
   .as_light_as
     margin-top: 30px
   .slide

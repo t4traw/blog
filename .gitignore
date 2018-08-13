@@ -1,4 +1,4 @@
 node_modules
 public
-static
+static/*.js
 .DS_Store
