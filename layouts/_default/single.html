@@ -1,5 +1,12 @@
 {{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+<article class="blog">
+  {{ if .Params.Image }}
+    <img src="{{ .Params.Image }}">
+  {{ else }}
+    <img src="{{ .Site.BaseURL }}/images/blank.png">
+  {{ end }}
+  <h1 class="title">{{ .Title }}</h1>
   {{ .Content }}
+  </article>
 {{ end }}
