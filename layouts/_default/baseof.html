@@ -6,8 +6,7 @@
       {{ .Site.Title }}
     {{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.js{{ else }}{{ index .Site.Data.manifest "bundle.js" | relURL }}{{ end }}"></script>
-
+    
   </head>
   <body>
     {{ partial "header.html" . }}
@@ -15,6 +14,7 @@
       {{ block "main" . }}{{ end }}
     </div>
     {{ partial "footer.html" . }}
+    <script src="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.js{{ else }}{{ index .Site.Data.manifest "bundle.js" | relURL }}{{ end }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.js" data-no-instant></script>
     <script data-no-instant>InstantClick.init();</script>
   </body>
