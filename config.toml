@@ -3,6 +3,7 @@ languageCode = "ja-ja"
 title = "lightly"
 canonifyURLs=false
 relativeURLs=true
+disableHugoGeneratorInject = true
 
 [permalinks]
   blog = "/:section/:title"
