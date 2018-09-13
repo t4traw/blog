@@ -11,23 +11,22 @@ header
   @media screen and (max-width: $smartphone_width)
     margin: ($header_height/2) ($header_height/4)
   height: $header_height
-  display: flex
-  justify-content: space-between
+  // display: flex/
+  // justify-content: space-between
   .logo
     svg
       height: $header_height
       width: auto
-  .menu
-    .contact_button
-      +background-gradation(20deg, #62c5ff, #6fe0f3)
-      padding: 1px
+  .contact_button
+    +background-gradation(20deg, #62c5ff, #6fe0f3)
+    padding: 1px
+    border-radius: 500px
+    display: inline-block
+    span
+      // background-color: #fff
+      padding: ($header_height/10) ($header_height/3)
       border-radius: 500px
       display: inline-block
-      span
-        // background-color: #fff
-        padding: ($header_height/10) ($header_height/3)
-        border-radius: 500px
-        display: inline-block
-        font-size: ($header_height/2)
-        font-weight: bold
-        color: #fff
+      font-size: ($header_height/2)
+      font-weight: bold
+      color: #fff

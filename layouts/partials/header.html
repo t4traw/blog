@@ -1,12 +1,36 @@
 <header>
-  <div class="logo">
-    <a href="/">
-      {{ partial "logo.svg" .}}
-    </a>
-  </div>
-  <div class="menu">
-    <a class="contact_button" href="/contact">
-      <span>お問い合わせ</span>
-    </a>
-  </div>
+  <nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <div class="logo" class="navbar-item">
+        <a href="/">
+          {{ partial "logo.svg" .}}
+        </a>
+      </div>
+      <div class="navbar-burger burger" onclick="toggle_menu(this)" data-target="header_menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="header_menu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/">
+          スタッフ
+        </a>
+        <a class="navbar-item" href="/"">
+          ブログ
+        </a>
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="contact_button" href="/contact">
+                <span>お問い合わせ</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>
