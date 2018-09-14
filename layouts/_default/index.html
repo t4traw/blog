@@ -26,7 +26,7 @@
                 {{ if .Params.Image }}
                   <img src="{{ .Params.Image }}">
                 {{ else }}
-                  <img src="{{ .Site.BaseURL }}/images/blank.png">
+                  {{ partial "blank.svg" .}}
                 {{ end }}
               </figure>
             </div>
