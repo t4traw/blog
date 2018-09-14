@@ -7,161 +7,53 @@
     </div>
   </div>
   <h1>豊橋・豊川を中心に、分かりやすい料金で顧問エンジニア・WEB開発・ホームページ制作をしています :)</h1>
-  <div class="columns is-multiline">
-    <div class="column is-4">
-      <a href="/about">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1110" height="465" viewBox="0 0 1110 465"><path fill="url(#SVGID_1_)" d="M0 0h1110v465H0z"/><path fill="#ff7675" d="M554.7 406.3L380.5 232.1A101.2 101.2 0 1 1 523.6 88.9l31.1 31 31.7-31.6a101.2 101.2 0 0 1 143.1 143.2L554.7 406.3z"/></svg>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="link title">lightlyが大切にしたいこと</p>
+  
+  <div id="particular">
+    {{ partial "index/particular.html" . }}
+  </div>
+
+  <div id="posts">
+    <div class="h2_wrap">
+      <h2>こんなお仕事しました！＆ウェブと仕事に関する便利記事</h2>
+    </div>
+    <div class="columns is-multiline">
+      {{ range where .Pages "Section" "blog" }}
+      <div class="column is-4">
+        <a href="{{.Permalink}}">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                {{ if .Params.Image }}
+                  <img src="{{ .Params.Image }}">
+                {{ else }}
+                  <img src="{{ .Site.BaseURL }}/images/blank.png">
+                {{ end }}
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="link title">{{ .Title }}</p>
+                </div>
+              </div>
+              <div class="content">
+                <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
               </div>
             </div>
-            <div class="content">
-              <p>無駄なことを省き、本当に必要なものだけを提供します。</p>
-            </div>
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="column is-4">
-      <a href="/about">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1110" height="465" viewBox="0 0 1110 465"><g fill="#5BE3A6"><circle cx="127.6" cy="239" r="25"/><path d="M123.4 232h158.2v14H123.4z"/><circle cx="287.5" cy="239" r="38.9"/></g><g fill="#56C7FF"><circle cx="287.2" cy="239" r="25"/><path d="M282.9 232h158.2v14H282.9z"/><circle cx="447.1" cy="239" r="38.9"/></g><g fill="#9522EC"><circle cx="447.2" cy="239" r="25"/><path d="M443 232h158.2v14H443z"/><circle cx="607.2" cy="239" r="38.9"/></g><g fill="#D61B74"><circle cx="607.2" cy="239" r="25"/><path d="M602.9 232h158.2v14H602.9z"/><circle cx="767.1" cy="239" r="38.9"/></g><g fill="#FF254D"><circle cx="767.6" cy="239" r="25"/><path d="M763.4 232h158.2v14H763.4z"/><circle cx="927.6" cy="239" r="38.9"/></g></svg>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="link title">システムやサイトは生きていますか？</p>
-              </div>
-            </div>
-            <div class="content">
-              <p>セキュリティ、スマホ対応、クラウド化。時代に合わせたシステムやサイトになっていますか？</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="column is-4">
-      <a href="/about">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1110" height="465" viewBox="0 0 1110 465"><path fill="#98FFB5" d="M404 205h165v84H404z"/><path fill="#9AECDB" d="M582 93V46h-91v24h-36v38h-37v50h-40v65h-52v117h230V223h-13v-49h4v-66h-3V93z"/><path fill="#2ACC9F" d="M555 223v-18h-12v-31h4v-66h-3V70h-44v38h-18v50h-22v47h-47v84h28v51h115V223z"/><path fill="#E2A16B" d="M595 419l-43-311h-25l-21 136-34-17-12 10 42 35-23 147z"/><path fill="#9AECDB" d="M736 227v-94h-89V92h-19V69h-92v23h-18v66h12v80h39v99h215V227z"/><path fill="#2ACC9F" d="M736 227v-94h-89V92h-19V69h-46V46h-46v47h20v23h26v42h51v80h43v99h108V227z"/></svg>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="link title">作りっぱなしの制作会社とは違います</p>
-              </div>
-            </div>
-            <div class="content">
-              <p>「サイトが完成しました。後はお客様が自由に更新できます」そんな体制になっていませんか？</p>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="h2_wrap">
-    <h2>こんなお仕事しました！＆ウェブと仕事に関する便利記事</h2>
-  </div>
-  <div class="columns is-multiline">
-    {{ range where .Pages "Section" "blog" }}
-    <div class="column is-4">
-      <a href="{{.Permalink}}">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              {{ if .Params.Image }}
-                <img src="{{ .Params.Image }}">
-              {{ else }}
-                <img src="{{ .Site.BaseURL }}/images/blank.png">
-              {{ end }}
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="link title">{{ .Title }}</p>
-              </div>
-            </div>
-            <div class="content">
-              <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    {{ end }}
-  </div>
-  <div class="h2_wrap">
-    <h2>WEB制作・ホームページ制作などの料金について</h2>
-  </div>
-  <div class="columns">
-    <div class="column">
-      <img src="https://placehold.it/300x300.png">
-    </div>
-    <div class="column">
-      <img src="">
-    </div>
-  </div>
-  <div class="h2_wrap">
-    <h2>今までに制作したサービスやサイトなど</h2>
-  </div>
-  <div class="tile is-ancestor">
-    <div class="tile is-vertical is-8">
-      <div class="tile">
-        <div class="tile is-parent is-vertical">
-          <article class="tile is-child notification is-primary">
-            <p class="title">Vertical...</p>
-            <p class="subtitle">Top tile</p>
-          </article>
-          <article class="tile is-child notification is-warning">
-            <p class="title">...tiles</p>
-            <p class="subtitle">Bottom tile</p>
-          </article>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-info">
-            <p class="title">Middle tile</p>
-            <p class="subtitle">With an image</p>
-            <figure class="image is-4by3">
-              <img src="https://bulma.io/images/placeholders/640x480.png">
-            </figure>
-          </article>
-        </div>
+        </a>
       </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-danger">
-          <p class="title">Wide tile</p>
-          <p class="subtitle">Aligned with the right tile</p>
-          <div class="content">
-            <!-- Content -->
-          </div>
-        </article>
-      </div>
-    </div>
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-success">
-        <div class="content">
-          <p class="title">Tall tile</p>
-          <p class="subtitle">With even more content</p>
-          <div class="content">
-            <!-- Content -->
-          </div>
-        </div>
-      </article>
+      {{ end }}
     </div>
   </div>
+
+  <div id="pricing">
+    <!-- {{ partial "index/pricing.html" . }} -->
+  </div>
+
+  <div id="works">
+    <!-- {{ partial "index/works.html" . }} -->
+  </div>
+
 </div>
 {{ end }}

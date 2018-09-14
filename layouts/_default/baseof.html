@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <title>{{ block "title" . }}
@@ -7,6 +7,7 @@
     {{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.js{{ else }}{{ index .Site.Data.manifest "bundle.js" | relURL }}{{ end }}"></script>
+    {{ "<!-- ソースコードの中で気になったものがあったら@t4trawに聞いてください！お友達になりましょう！ -->" | safeHTML }}
   </head>
   <body>
     {{ partial "header.html" . }}
