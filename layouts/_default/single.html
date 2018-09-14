@@ -1,6 +1,6 @@
 {{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
 {{ define "main" }}
-<article class="blog">
+<article class="single">
   {{ if .Params.Image }}
     <img src="{{ .Params.Image }}">
   {{ else }}
@@ -9,8 +9,8 @@
   <h1 class="title">{{ .Title }}</h1>
   <nav>
     <div>{{ dateFormat "2006年1月2日" .Date }}</div>
-    {{ with .Params.categories }}<div>カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>{{ end }}
-    {{ with .Params.tags }}<div>タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">#{{ . }}</a>{{ end }}</div>{{ end }}
+    {{ with .Params.categories }}<div class="category_list">カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>{{ end }}
+    {{ with .Params.tags }}<div class="tag_list">タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>{{ end }}
   </nav>
   {{ .Content }}
   </article>

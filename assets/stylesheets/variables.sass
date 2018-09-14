@@ -1,5 +1,13 @@
-$brand_color: #972AFF
+$red_color: #EF6461
+$blue_color: #3FC6FF
+$purple_color: #972AFF
+$green_color: #17dbd6
+$yellow_color: #FFD147
+
+$brand_color: $blue_color
 $brand_grad: linear-gradient(20deg, $brand_color, adjust-hue($brand_color, 20%))
+
+$link_color: #3c75ff
 
 =background-gradation($angle: 20deg, $color-a: $brand_color, $color-b: 20%)
   background: linear-gradient($angle, $color-a, $color-b)
@@ -7,7 +15,10 @@ $brand_grad: linear-gradient(20deg, $brand_color, adjust-hue($brand_color, 20%))
 $pc_width: 1120px
 $tablet_width: 768px
 $smartphone_width: 414px
-  
+
+a
+  color: $link_color
+
 // PC
 // @media screen and (min-width: $tablet_width + 1px)
 // Tablet
