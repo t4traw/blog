@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production -p",
-    "start": "APP_ENV=dev webpack --mode development"
+    "serve": "APP_ENV=dev webpack --mode development"
   },
   "dependencies": {
     "animate.css": "^3.7.0",
