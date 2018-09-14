@@ -7,6 +7,7 @@ disableHugoGeneratorInject = true
 
 [taxonomies]
   category = "categories"
+  tag = "tags"
 
 [permalinks]
   blog = "/:section/:year/:month/:title"
