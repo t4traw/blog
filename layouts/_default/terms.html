@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1>Posts</h1>
+  <h1 class="title">{{ .Title }}</h1>
   {{ range .Pages }}
     <article>
       <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>

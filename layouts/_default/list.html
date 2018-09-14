@@ -1,9 +1,32 @@
 {{ define "main" }}
-  <h1>Posts</h1>
-  {{ range .Pages }}
-    <article>
-      <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
-      {{ .Content }}
-    </article>
+<h1 class="title">{{ .Title }}</h1>
+<div class="columns is-multiline">
+  {{ range where .Pages "Section" "blog" }}
+  <div class="column is-4">
+    <a href="{{.Permalink}}">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image">
+            {{ if .Params.Image }}
+              <img src="{{ .Params.Image }}">
+            {{ else }}
+              {{ partial "blank.svg" .}}
+            {{ end }}
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="link title">{{ .Title }}</p>
+            </div>
+          </div>
+          <div class="content">
+            <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
   {{ end }}
+</div>
 {{ end }}
