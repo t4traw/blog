@@ -1,12 +1,15 @@
 baseURL = ""
 languageCode = "ja-ja"
 title = "lightly"
-canonifyURLs=false
-relativeURLs=true
+canonifyURLs = false
+relativeURLs = true
 disableHugoGeneratorInject = true
 
+[taxonomies]
+  category = "categories"
+
 [permalinks]
-  blog = "/:section/:title"
+  blog = "/:section/:year/:month/:title"
 
 [build]
   command = "yarn build"
