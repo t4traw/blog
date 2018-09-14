@@ -37,7 +37,8 @@
                 </div>
               </div>
               <div class="content">
-                <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
+                <time datetime="{{ .Date.Format "2006年1月2日" }}">{{ .Date.Format "2006年1月2日" }}</time>
+                <p>{{ .Summary | plainify }}</p>
               </div>
             </div>
           </div>
