@@ -1,5 +1,9 @@
 ---
-title: ""
+title: 
 date: {{ .Date }}
-image: ""
+categories:
+  - 
+tags:
+  - 
+image: 
 ---
