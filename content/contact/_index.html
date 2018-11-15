@@ -1,0 +1,35 @@
+---
+title: "Contact"
+---
+<div>
+  <h1 class="title">Contact</h1>
+</div>
+
+<div>
+  <form name="contactform" action="thanks.html" netlify>
+    
+    <div class="field">
+      <label for="name" class="label">お名前<span class="required">*必須</span></label>
+      <input id="name" type="text" class="text input" value="" name="name">
+    </div>
+
+    <div class="field">
+      <label for="email" class="label">メールアドレス<span class="required">*必須</span></label>
+      <input id="email" type="text" class="text input" value="" name="email">
+    </div>
+
+    <div class="field"></div>
+      <label for="body" class="label">本文<span class="required">*必須</span></label>
+      <textarea id="body" rows="7" name="body" class="textarea"></textarea>
+    <div class="field"></div>
+
+    <input type="submit" class="submit button is-primary is-rounded" value="送信する" />
+  </form>
+</div>
+
+<style>
+  .required {
+    color: red;
+    font-size: 60%;
+  }
+</style>

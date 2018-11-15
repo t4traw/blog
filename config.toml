@@ -1,6 +1,6 @@
 baseURL = ""
 languageCode = "ja-ja"
-title = "lightly"
+title = "Move lightly, and quickly"
 canonifyURLs = false
 relativeURLs = true
 disableHugoGeneratorInject = true
