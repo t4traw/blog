@@ -1,21 +1,10 @@
 {{ define "main" }}
 <div id="welcome">
-  <p class="first_message">Move lightly, and quickly</p>
   <div class="first_view">
-    <div class="svg_wrapper">
-      {{ partial "hero.svg" . }}
-    </div>
+    <p class="first_message">{{ .Site.Title }}</p>
+    <h1>愛知県豊橋市でWEB開発・ホームページ制作をしている<a href="/about">@t4traw</a>のブログです :)</h1>
   </div>
-  <h1>愛知県豊橋市でWEB開発・ホームページ制作をしています :)</h1>
-  
-  <div id="particular">
-    <!-- {{ partial "index/particular.html" . }} -->
-  </div>
-
   <div id="posts">
-    <div class="h2_wrap">
-      <h2>ウェブとEC、技術に関するブログ</h2>
-    </div>
     <div class="columns is-multiline">
       {{ range where (.Paginator 10).Pages "Section" "blog" }}
         {{ .Render "pagelist" }}
@@ -23,14 +12,5 @@
     </div>
     <a href="/blog" class="to_page_list">ブログの記事一覧はこちら</a>
   </div>
-
-  <div id="pricing">
-    <!-- {{ partial "index/pricing.html" . }} -->
-  </div>
-
-  <div id="works">
-    <!-- {{ partial "index/works.html" . }} -->
-  </div>
-
 </div>
 {{ end }}

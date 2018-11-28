@@ -1,4 +1,4 @@
-$header_height: 40px
+$header_height: 3.25rem
 
 header
   // PC
@@ -10,13 +10,18 @@ header
   // Smartphone
   @media screen and (max-width: $smartphone_width)
     margin: ($header_height/2) ($header_height/4)
-  height: $header_height
+    margin-bottom: 30px
   // display: flex/
   // justify-content: space-between
   .logo
-    svg
+    width: $header_height + 1rem
+    height: $header_height + 1rem
+    @media screen and (max-width: $smartphone_width)
+      width: $header_height
       height: $header_height
+    svg
       width: auto
+      padding: 8px
   .contact_button
     +background-gradation(20deg, $blue_color, lighten($blue_color, 18%))
     padding: 1px
@@ -27,6 +32,6 @@ header
       padding: ($header_height/10) ($header_height/3)
       border-radius: 500px
       display: inline-block
-      font-size: ($header_height/2)
+      font-size: 110%
       font-weight: bold
       color: #fff
