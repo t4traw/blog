@@ -3,6 +3,7 @@ $blue_color: #3FC6FF
 $purple_color: #972AFF
 $green_color: #17dbd6
 $yellow_color: #fff254
+$gray_color: #424242
 
 $brand_color: $blue_color
 $brand_grad: linear-gradient(20deg, $brand_color, adjust-hue($brand_color, 20%))
@@ -40,3 +41,14 @@ a
   padding: 0 20px
   width: 100%
   max-width: $pc_width
+
+.stretched-link::after
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1
+  pointer-events: auto
+  content: ""
+  background-color: rgba(0,0,0,0)

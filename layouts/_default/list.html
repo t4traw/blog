@@ -1,32 +1,25 @@
 {{ define "main" }}
+
 <h1 class="title">{{ .Title }}</h1>
 <div class="columns is-multiline">
-  {{ range where .Pages "Section" "blog" }}
-  <div class="column is-4">
-    <a href="{{.Permalink}}">
-      <div class="card">
-        <div class="card-image">
-          <figure class="image">
-            {{ if .Params.Image }}
-              <img src="{{ .Params.Image }}">
-            {{ else }}
-              {{ partial "blank.svg" .}}
-            {{ end }}
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="link title">{{ .Title }}</p>
-            </div>
-          </div>
-          <div class="content">
-            <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
+  {{ range where (.Paginator 12).Pages "Section" "blog" }}
+    {{ .Render "pagelist" }}
   {{ end }}
 </div>
+
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+<div id="pagination">
+  <nav role="pagination">
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}" class="stretched-link">前のページ</a>
+    {{ end }}
+    <span class="">{{ .Paginator.PageNumber }}/{{ .Paginator.TotalPages }}</span>
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}" class="stretched-link">次のページ</a>
+    {{ end }}
+  </nav>
+</div>
 {{ end }}
+
+{{ end }}
+
