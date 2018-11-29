@@ -1,6 +1,7 @@
 {{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
 {{ define "main" }}
-<article class="single">
+<div class="single">
+  <article>
   {{ if .Params.Image }}
     <img src="{{ .Params.Image }}">
   {{ else }}
@@ -14,4 +15,16 @@
   </nav>
   {{ .Content }}
   </article>
+  {{ $related := .Site.RegularPages.Related . | first 10 }}
+  {{ with $related }}
+  <div class="related_links">
+    <h3>関連する記事</h3>
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}
 {{ end }}
