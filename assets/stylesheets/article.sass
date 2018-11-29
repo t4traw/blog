@@ -1,10 +1,12 @@
 $article_block_margin: 4rem
 
 article
-  h1, h2, h3, h4, h5, p, div, ul, ol, .highlight:not(:last-child)
+  h1, h2, h3, h4, h5, p, div, .highlight:not(:last-child)
     margin-bottom: $article_block_margin
   & > pre
     margin-bottom: $article_block_margin
+  & > ul, ol
+    margin-bottom: 0
   h2
     font-size: 1.6rem
     font-weight: bold
