@@ -9,10 +9,15 @@
   {{ end }}
   <h1 class="title">{{ .Title }}</h1>
   <nav>
-    <div>{{ dateFormat "2006年1月2日" .Date }}</div>
-    {{ with .Params.categories }}<div class="category_list">カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>{{ end }}
-    {{ with .Params.tags }}<div class="tag_list">タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>{{ end }}
+    <span>{{ dateFormat "2006年1月2日" .Date }}</span>
+    {{ with .Params.categories }}<span class="category_list">カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</span>{{ end }}
+    {{ with .Params.tags }}<span class="tag_list">タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</span>{{ end }}
   </nav>
+  {{ if eq .Params.toc true }}
+  <aside>
+    {{.TableOfContents}}
+  </aside>
+  {{ end }}
   {{ .Content }}
   </article>
   {{ $related := .Site.RegularPages.Related . | first 10 }}
