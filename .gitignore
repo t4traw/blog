@@ -3,3 +3,4 @@ public
 static/*.js
 .DS_Store
 data/manifest.json
+yarn-error.log
