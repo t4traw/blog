@@ -5,6 +5,8 @@ canonifyURLs = false
 relativeURLs = true
 disableHugoGeneratorInject = true
 hasCJKLanguage = true
+pygmentsUseClasses = true
+pygmentsCodefences = true
 
 [taxonomies]
   category = "categories"
