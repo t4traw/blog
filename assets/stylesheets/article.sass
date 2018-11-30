@@ -5,8 +5,7 @@ article
     margin-bottom: $article_block_margin
   & > pre
     margin-bottom: $article_block_margin
-  & > ul, ol
-    margin-bottom: 0
+
   h2
     font-size: 1.6rem
     font-weight: bold
@@ -16,9 +15,13 @@ article
     & > code
       color: #63c3a6
       padding: .15em .5e
-  ul
+  ul, ol
+    & > ul, ol
+      margin-bottom: 0
     li
       margin: 0 0 0 2rem
+  ul
+    li
       list-style: disc
   img
     filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.25))
