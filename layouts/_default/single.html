@@ -8,16 +8,11 @@
       {{ partial "blank.svg" .}}
     {{ end }}
     <h1 class="title">{{ .Title }}</h1>
-    <nav>
+    <div id="post_meta_data">
       <span>{{ dateFormat "2006年1月2日" .Date }}</span>
       {{ with .Params.categories }}<span class="category_list">カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</span>{{ end }}
       {{ with .Params.tags }}<span class="tag_list">タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</span>{{ end }}
-    </nav>
-    {{ if eq .Params.toc true }}
-    <aside>
-      {{.TableOfContents}}
-    </aside>
-    {{ end }}
+    </div>
     {{ .Content }}
   </article>
   {{ $related := .Site.RegularPages.Related . | first 10 }}
