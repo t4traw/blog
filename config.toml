@@ -7,6 +7,13 @@ disableHugoGeneratorInject = true
 hasCJKLanguage = true
 pygmentsUseClasses = true
 pygmentsCodefences = true
+rssuri = "rss.xml"
+rssLimit = 15
+copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+
+[author]
+    name = "t4traw"
+    email = "t4traw@gmail.com"
 
 [taxonomies]
   category = "categories"
