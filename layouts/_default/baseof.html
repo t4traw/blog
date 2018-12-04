@@ -7,6 +7,13 @@
     {{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.js{{ else }}{{ index .Site.Data.manifest "bundle.js" | relURL }}{{ end }}"></script>
+    <meta name="twitter:card" content="summary" />
+    <meta name="og:title" content="{{ .Title }}" />
+    <meta name="og:description" content="{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta name="og:image" content="{{ .Site.BaseURL }}{{ .Params.image }}" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta name="twitter:site" content="@t4traw" />
+    <meta name="twitter:creator" content="@t4traw" /> 
     {{ "<!-- ソースコードの中で気になったものがあったら@t4trawに聞いてください！お友達になりましょう！ -->" | safeHTML }}
   </head>
   <body>
