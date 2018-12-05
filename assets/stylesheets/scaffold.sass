@@ -1,0 +1,44 @@
+body
+  font-family: $base_font_family
+
+a
+  color: $link_color
+
+=background-gradation($angle: 20deg, $color-a: $brand_color, $color-b: 20%)
+  background: linear-gradient($angle, $color-a, $color-b)
+
+// PC
+// @media screen and (min-width: $tablet_width + 1px)
+// Tablet
+// @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width)
+// Smartphone
+// @media screen and (max-width: $smartphone_width)
+
+@keyframes transparent
+  100%
+    opacity: 1
+
+=fadein($time)
+  opacity: 0
+  animation: transparent 0.5s ease $time 1 forwards
+
+.main_container
+  display: inherit
+  margin: 0 auto
+  padding: 0 20px
+  width: 100%
+  max-width: $pc_width
+
+.stretched-link::after
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1
+  pointer-events: auto
+  content: ""
+  background-color: rgba(0,0,0,0)
+
+nav:not([class])
+  display: none

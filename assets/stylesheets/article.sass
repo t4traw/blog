@@ -3,7 +3,7 @@ $article_block_margin: 4rem
 article
   h1, h2, h3, h4, h5, p, div, .highlight:not(:last-child)
     margin-bottom: $article_block_margin
-  & > pre
+  & > pre, ul, ol
     margin-bottom: $article_block_margin
   h2
     font-size: 1.6rem
@@ -14,7 +14,7 @@ article
     & > code
       color: #63c3a6
       padding: .15em .5e
-  ul, ol
+  ul, ol, li
     & > ul, ol
       margin-bottom: 0
     li
