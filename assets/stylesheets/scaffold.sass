@@ -1,5 +1,15 @@
+html
+  height: 100%
+
 body
   font-family: $base_font_family
+  height: 100%
+  display: flex
+  min-height: 100%
+  flex-direction: column
+
+footer
+  min-height: 100px
 
 a
   color: $link_color
@@ -23,11 +33,11 @@ a
   animation: transparent 0.5s ease $time 1 forwards
 
 .main_container
-  display: inherit
   margin: 0 auto
   padding: 0 20px
   width: 100%
   max-width: $pc_width
+  flex: 1
 
 .stretched-link::after
   position: absolute
