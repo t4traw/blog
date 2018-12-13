@@ -11,8 +11,8 @@ rssLimit = 15
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 
 [author]
-    name = "t4traw"
-    email = "t4traw@gmail.com"
+  name = "t4traw"
+  email = "t4traw@gmail.com"
 
 [taxonomies]
   category = "categories"
