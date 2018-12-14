@@ -3,6 +3,7 @@ html
 
 body
   font-family: $base_font_family
+  font-size: 1.2rem
   height: 100%
   display: flex
   min-height: 100%
@@ -12,7 +13,9 @@ footer
   min-height: 100px
 
 a
-  color: $link_color
+  &:hover
+    border-bottom: 1px solid lighten($link_color, 20)
+
 
 =background-gradation($angle: 20deg, $color-a: $brand_color, $color-b: 20%)
   background: linear-gradient($angle, $color-a, $color-b)
@@ -31,6 +34,9 @@ a
 =fadein($time)
   opacity: 0
   animation: transparent 0.5s ease $time 1 forwards
+
+.button
+  font-weight: bold
 
 .main_container
   margin: 0 auto
