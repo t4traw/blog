@@ -1,0 +1,87 @@
+@font-face {
+	font-family: 'ptcg';
+	src: url('/font/ptcg.ttf');
+}
+
+.tcg-card {
+  width: 250px;
+  display: inherit;
+  margin: 0 auto;
+}
+
+.ptcg-gx {
+	font-family: ptcg;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1.5;
+  font-style: normal;
+  height: 1.2rem;
+  border: 2px solid #e8e8e8;
+  color: #9a9da2;
+  margin: 0 5px;
+  text-align: center;
+  transform: skewX(-15deg);
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
+.ptcg-e {
+	font-family: ptcg;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-style: normal;
+  border-radius: 20px;
+  padding: 1px 1px 0px 2px;
+  // Common
+  &.c {
+    background-color: #f5f5f5;
+    border: 1px solid #f1f1f1;
+  }
+  // Red
+  &.r {
+    background-color: #ff786e;
+  }
+  // Green
+  &.g {
+    background-color: #a8da7a;
+  }
+  // Water
+  &.w {
+    background-color: #94d3ff;
+  }
+  // Electric
+  &.l {
+    background-color: #ffef61;
+  }
+  // Psychic
+  &.p {
+    background-color: #d28eff;
+  }
+  // Fighter
+  &.f {
+    background-color: #e6762b;
+  }
+  // Dark
+  &.d {
+    background-color: #84a8b1;
+  }
+  // Metal
+  &.m {
+    background-color: #dedede;
+  }
+  // fairy
+  &.y {
+    background-color: #fc5e9b;
+  }
+  // Dragon
+  &.n {
+    background-color: #ccb191;
+  }
+}
