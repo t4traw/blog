@@ -1,7 +1,7 @@
 {{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
 {{ define "main" }}
 <div class="single">
-  <article>
+  <article class="article">
     {{ if .Params.Image }}
       <img src="{{ .Params.Image }}">
     {{ else }}
