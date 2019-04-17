@@ -1,0 +1,18 @@
+$red_color: #ff5746;
+$blue_color: #3FC6FF;
+$purple_color: #972AFF;
+$green_color: #17dbd6;
+$yellow_color: #fff254;
+$gray_color: #424242;
+
+$brand_color: $blue_color;
+$brand_grad: linear-gradient(20deg, $brand_color, adjust-hue($brand_color, 20%));
+
+$link_color: #3c75ff;
+
+$pc_width: 880px;
+$tablet_width: 620px;
+$smartphone_width: 414px;
+
+$base_font_family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+$base_font_size: 20px;

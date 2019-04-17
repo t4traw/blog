@@ -1,0 +1,30 @@
+.single {
+  display: inherit;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+
+  div#post_meta_data {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+
+    span {
+      margin-right: 1rem;
+    }
+
+    .category_list, .tag_list {
+      a {
+        color: lighten($link_color, 7%);
+        font-weight: bold;
+      }
+    }
+
+    .tag_list {}
+  }
+
+  .title {
+    font-size: 2rem;
+    margin: 2rem 0 0.8rem;
+  }
+}

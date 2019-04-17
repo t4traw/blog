@@ -1,0 +1,54 @@
+$header_height: 3.25rem;
+
+header {
+  // PC
+  @media screen and (min-width: $tablet_width + 1px) {
+    margin: $header_height;
+  }
+
+  // Tablet
+  @media only screen and (min-width: $smartphone_width + 1px) and (max-width: $tablet_width) {
+    margin: $header_height / 2;
+  }
+
+  // Smartphone
+  @media screen and (max-width: $smartphone_width) {
+    margin: ($header_height / 2) ($header_height / 4);
+    margin-bottom: 30px;
+  }
+
+  // display: flex/
+  // justify-content: space-between
+  .logo {
+    width: $header_height + 1rem;
+    height: $header_height + 1rem;
+
+    @media screen and (max-width: $smartphone_width) {
+      width: $header_height;
+      height: $header_height;
+    }
+
+    svg {
+      width: auto;
+      padding: 8px;
+    }
+  }
+
+  .contact_button {
+    @include background-gradation(20deg, $blue_color, lighten($blue_color, 18%));
+
+    padding: 1px;
+    border-radius: 500px;
+    display: inline-block;
+
+    span {
+      // background-color: #fff
+      padding: ($header_height / 10) ($header_height / 3);
+      border-radius: 500px;
+      display: inline-block;
+      font-size: 110%;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
