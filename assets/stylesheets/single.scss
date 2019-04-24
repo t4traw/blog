@@ -20,11 +20,10 @@
       }
     }
 
-    .tag_list {}
   }
 
   .title {
-    font-size: 2rem;
+    @include font-size(2rem);
     margin: 2rem 0 0.8rem;
   }
 }
