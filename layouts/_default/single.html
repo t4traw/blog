@@ -8,10 +8,18 @@
       {{ partial "blank.svg" .}}
     {{ end }}
     <h1 class="title">{{ .Title }}</h1>
-    <div id="post_meta_data">
-      <span>{{ dateFormat "2006年1月2日" .Date }}</span>
-      {{ with .Params.categories }}<span class="category_list">カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</span>{{ end }}
-      {{ with .Params.tags }}<span class="tag_list">タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</span>{{ end }}
+    <div class="author columns is-vcentered is-mobile">
+      <div class="column is-narrow">
+        <img class="user" src="https://avatars1.githubusercontent.com/u/6788936?v=4">
+      </div>
+      <div class="column">
+        <span class="author_name">この記事を書いたひと: <a href="/about">@t4traw</a></span>
+        <span class="publish_date">{{ dateFormat "2006年1月2日" .Date }}</span>
+        <ul class="post_meta_data">
+          {{ with .Params.categories }}<li class="category_list">カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</li>{{ end }}
+          {{ with .Params.tags }}<li class="tag_list">タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</li>{{ end }}
+        </ul>
+      </div>
     </div>
     {{ .Content }}
   </article>

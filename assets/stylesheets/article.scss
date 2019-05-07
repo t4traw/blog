@@ -27,7 +27,9 @@ article {
     margin-bottom: $article_block_margin;
   }
 
-  h2, h3, h4 {
+  h2,
+  h3,
+  h4 {
     margin-top: 6rem;
     margin-bottom: 2rem;
   }
@@ -136,6 +138,52 @@ article {
       text-align: right;
       color: #888888;
       font-size: 0.9em;
+    }
+  }
+
+  .author {
+    margin: 3rem 0 4rem!important;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    font-size: 0.8rem;
+
+    .column {
+      margin: 0;
+    }
+
+    img {
+      width: 50px;
+      border-radius: 9999px;
+      filter: none;
+    }
+
+    span {
+      margin: 0;
+      display: block;
+    }
+
+    .author_name {
+
+    }
+    
+    .post_meta_data {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+
+      li {
+        margin: 0;
+        list-style: none;
+      }
+
+      .category_list,
+      .tag_list {
+        a {
+          color: lighten($link_color, 7%);
+          margin-right: 5px;
+        }
+      }
+
     }
   }
 
