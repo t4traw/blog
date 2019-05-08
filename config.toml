@@ -24,3 +24,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
 [build]
   command = "yarn build"
   publish = "dist"
+
+[related]
+  includeNewer = true
+  toLower = false
