@@ -26,5 +26,16 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
   publish = "dist"
 
 [related]
+  threshold = 80
   includeNewer = true
-  toLower = false
+  toLower = true
+[[related.indices]]
+  name = "categories"
+  weight = 150
+[[related.indices]]
+  name  = "tags"
+  weight = 100
+[[related.indices]]
+  name  = "date"
+  pattern = "2006"
+  weight = 100
