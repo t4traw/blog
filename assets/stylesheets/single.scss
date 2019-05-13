@@ -8,4 +8,11 @@
     @include font-size(2rem);
     margin: 2rem 0 0.8rem;
   }
+
+  .related_links {
+    .title {
+      @include font-size(18px)
+      text-align: center;
+    }
+  }
 }
