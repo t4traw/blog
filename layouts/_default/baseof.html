@@ -56,7 +56,6 @@
     <link rel="icon" type="image/png" sizes="24x24" href="{{ .Site.BaseURL }}/favicon/icon-24x24.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/favicon/icon-32x32.png">
     <link rel="manifest" href="{{ .Site.BaseURL }}/favicon/manifest.json">
-    <script src="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.js{{ else }}{{ index .Site.Data.manifest "bundle.js" | relURL }}{{ end }}"></script>
     {{ "<!-- ソースコードの中で気になったものがあったら@t4trawに聞いてください！お友達になりましょう！ -->" | safeHTML }}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -73,6 +72,7 @@
     </div>
     {{ partial "footer.html" . }}
   </body>
+  <script src="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.js{{ else }}{{ index .Site.Data.manifest "bundle.js" | relURL }}{{ end }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.js" data-no-instant></script>
   <script data-no-instant>
     (function(i,s,o,g,r,a,m){
