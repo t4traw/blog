@@ -1,6 +1,7 @@
 node_modules
 public
 static/*.js
+static/*.css
 .DS_Store
 data/manifest.json
 yarn-error.log

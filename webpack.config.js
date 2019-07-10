@@ -1,10 +1,12 @@
-const path = require("path");
-const webpack = require('webpack');
-const CleanPlugin = require('clean-webpack-plugin');
-const shellPlugin = require('webpack-shell-plugin');
-const manifestPlugin = require('webpack-manifest-plugin');
-
-const hugoSrc = path.resolve(__dirname, "site");
+const webpack = require('webpack')
+const path = require("path")
+const glob = require('glob')
+const CleanPlugin = require('clean-webpack-plugin')
+const shellPlugin = require('webpack-shell-plugin')
+const manifestPlugin = require('webpack-manifest-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const hugoSrc = path.resolve(__dirname, "site")
 
 function set() {
   switch (process.env.APP_ENV) {
@@ -24,7 +26,7 @@ function set() {
 }
 
 module.exports = () => {
-  var env = set();
+  var env = set()
 
   var config = {
     watch: env.watch,
@@ -55,18 +57,39 @@ module.exports = () => {
       new manifestPlugin({
         fileName: '../data/manifest.json',
       }),
+      new MiniCssExtractPlugin({
+        filename: "[name].css",
+      }),
+      new PurgecssPlugin({
+        paths: glob.sync(`${path.join(__dirname, 'layouts')}/**/*`, { nodir: true }),
+      }),
     ],
     module: {
       rules: [{
         test: /\.(css|scss|sass)$/,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
-          "postcss-loader",
+          {
+            loader: 'postcss-loader',
+              options: {
+                sourceMap: true,
+                plugins: [
+                  require('autoprefixer')({
+                    grid: true
+                  }),
+                  require('csswring')(),
+                  require('cssnano')({
+                    preset: 'default',
+                  }),
+                  
+                ]
+              },
+          },
           "sass-loader"
         ]
       }]
     }
-  };
-  return config;
-};
+  }
+  return config
+}
