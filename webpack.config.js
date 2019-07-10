@@ -25,6 +25,12 @@ function set() {
   }
 }
 
+function collectWhitelistPatterns() {
+  return [
+    /^filename/
+  ]
+}
+
 module.exports = () => {
   var env = set()
 
@@ -61,7 +67,8 @@ module.exports = () => {
         filename: "[name].css",
       }),
       new PurgecssPlugin({
-        paths: glob.sync(`${path.join(__dirname, 'layouts')}/**/*`, { nodir: true }),
+        paths: glob.sync(`${path.join(__dirname, '')}/**/*.html`, { nodir: true }),
+        whitelistPatterns: collectWhitelistPatterns
       }),
     ],
     module: {
