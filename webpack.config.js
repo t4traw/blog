@@ -27,7 +27,9 @@ function set() {
 
 function collectWhitelistPatterns() {
   return [
-    /^filename/
+    /filename/,
+    /tcg-card/,
+    /^ptcg-e/
   ]
 }
 
