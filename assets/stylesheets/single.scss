@@ -7,6 +7,9 @@
   .title {
     @include font-size(2rem);
     margin: 2rem 0 0.8rem;
+    padding: 6px;
+    background-color: lighten($color: $gray_color, $amount: 10);
+    line-height: 1.35;
   }
 
   .related_links {
