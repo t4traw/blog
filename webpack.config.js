@@ -31,6 +31,7 @@ function collectWhitelist() {
     'filename',
     'is-active',
     'tcg-card',
+    'blockquote',
   ]
 }
 
