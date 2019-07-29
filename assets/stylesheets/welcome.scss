@@ -2,6 +2,14 @@
   .ads {
     margin-bottom: 1rem;
   }
+
+  .categories {
+    ul {
+      li {
+        border-bottom: 1px dotted $gray_color;
+      }
+    }
+  }
 }
 
 .card {

@@ -17,6 +17,12 @@ a {
   }
 }
 
+strong {
+  background-color: $yellow_color;
+  margin: 0 5px;
+  padding: 4px 0;
+}
+
 @mixin background-gradation($angle: 20deg, $color-a: $brand_color, $color-b: 20%) {
   background: linear-gradient($angle, $color-a, $color-b);
 }
