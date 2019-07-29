@@ -17,6 +17,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
 [taxonomies]
   category = "categories"
   tag = "tags"
+	archive = "archives"
 
 [permalinks]
   blog = "/:section/:year/:month/:title"

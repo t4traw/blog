@@ -1,6 +1,10 @@
 .about {
   margin-top: 100px;
 
+  h2.name {
+    margin-top: 0;
+  }
+
   .user_bio {
     .name {
       text-align: left;
@@ -27,8 +31,9 @@
 }
 
 .user_image {
+  text-align: center;
   img {
-    width: 150px;
+    width: 120px;
     border-radius: 100%;
   }
 }

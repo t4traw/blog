@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="{{ .Site.BaseURL }}/favicon/icon-192x192.png">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.css{{ else }}{{ index .Site.Data.manifest "bundle.css" | relURL }}{{ end }}">
     {{ "<!-- ソースコードの中で気になったものがあったら@t4trawに聞いてください！お友達になりましょう！ -->" | safeHTML }}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: "ca-pub-4542333975748705",
@@ -29,8 +29,10 @@
   </head>
   <body>
     {{ partial "header.html" . }}
-    <div class="main_container">
-      {{ block "main" . }}{{ end }}
+    <div class="container">
+      <div class="main_container">
+        {{ block "main" . }}{{ end }}
+      </div>
     </div>
     {{ partial "footer.html" . }}
   </body>
