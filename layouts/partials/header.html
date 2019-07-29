@@ -2,9 +2,7 @@
   <div class="navbar is-transparent">
     <div class="navbar-brand">
       <div class="logo" class="navbar-item">
-        <a href="/">
-          {{ partial "logo.svg" .}}
-        </a>
+        <a href="/">{{ partial "logo.svg" .}}</a>
       </div>
       <div class="navbar-burger burger" onclick="toggle_menu(this)" data-target="header_menu">
         <span></span>
@@ -15,17 +13,9 @@
 
     <div id="header_menu" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="/about">かいてるひと</a>
+        <a class="navbar-item" href="/about">あばうと</a>
         <a class="navbar-item" href="/blog">ぶろぐ</a>
-        <div class="navbar-item">
-          <div class="field is-grouped">
-            <p class="control">
-              <a class="contact_button" href="/contact">
-                <span>おといあわせ</span>
-              </a>
-            </p>
-          </div>
-        </div>
+        <a class="navbar-item" href="/contact">おといあわせ</a>
       </div>
     </div>
   </div>

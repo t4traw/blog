@@ -1,17 +1,24 @@
 {{ define "main" }}
 <div id="welcome">
   <div class="first_view">
-    <p class="first_message">{{ .Site.Title }}</p>
     <h1>愛知県東三河でWEB開発・ホームページ制作をしている<a href="/about">@t4traw</a>のブログです</h1>
     <h2>技術相談・制作依頼は気軽に<a href="/contact">お問い合わせページからどうぞ</a> :)</h2>
   </div>
-  <div id="posts">
-    <div class="columns is-multiline">
-      {{ range where (.Paginator 9).Pages "Section" "blog" }}
-        {{ .Render "pagelist" }}
-      {{ end }}
+  <div class="columns">
+    <div class="column">
+      <div id="posts">
+        <div class="columns is-multiline">
+          {{ range where (.Paginator 9).Pages "Section" "blog" }}
+            {{ .Render "pagelist" }}
+          {{ end }}
+        </div>
+        <a href="/blog" class="to_page_list">ブログの記事一覧はこちら</a>
+      </div>
     </div>
-    <a href="/blog" class="to_page_list">ブログの記事一覧はこちら</a>
+    <div class="column is-3">
+      <h2>かてごりー</h2>
+    </div>
   </div>
+
 </div>
 {{ end }}

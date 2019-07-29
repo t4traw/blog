@@ -25,10 +25,17 @@ function set() {
   }
 }
 
+function collectWhitelist() {
+  // do something to collect the whitelist
+  return [
+    'filename',
+    'is-active',
+    'tcg-card',
+  ]
+}
+
 function collectWhitelistPatterns() {
   return [
-    /filename/,
-    /tcg-card/,
     /^ptcg-e/
   ]
 }
@@ -70,6 +77,7 @@ module.exports = () => {
       }),
       new PurgecssPlugin({
         paths: glob.sync(`${path.join(__dirname, '')}/**/*.html`, { nodir: true }),
+        whitelist: collectWhitelist,
         whitelistPatterns: collectWhitelistPatterns
       }),
     ],
