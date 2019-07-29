@@ -1,6 +1,6 @@
-baseURL = "https://www.t4traw.net"
+baseURL = "https://www.t4traw.net/"
 languageCode = "ja-ja"
-title = "すきなものをすきといえるせかいにしたい"
+title = "すきせか"
 canonifyURLs = false
 relativeURLs = true
 disableHugoGeneratorInject = true
@@ -17,6 +17,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
 [taxonomies]
   category = "categories"
   tag = "tags"
+	archive = "archives"
 
 [permalinks]
   blog = "/:section/:year/:month/:title"

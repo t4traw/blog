@@ -1,17 +1,47 @@
 {{ define "main" }}
 <div id="welcome">
-  <div class="first_view">
-    <p class="first_message">{{ .Site.Title }}</p>
-    <h1>愛知県東三河でWEB開発・ホームページ制作をしている<a href="/about">@t4traw</a>のブログです</h1>
-    <h2>技術相談・制作依頼は気軽に<a href="/contact">お問い合わせページからどうぞ</a> :)</h2>
-  </div>
-  <div id="posts">
-    <div class="columns is-multiline">
-      {{ range where (.Paginator 9).Pages "Section" "blog" }}
-        {{ .Render "pagelist" }}
-      {{ end }}
+  <div class="columns">
+    <div class="column">
+      <div class="ads">
+        <!-- index_header -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4542333975748705"
+            data-ad-slot="4114881003"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <div id="posts">
+        <div class="columns is-multiline">
+          {{ range where (.Paginator 9).Pages "Section" "blog" }}
+            {{ .Render "pagelist" }}
+          {{ end }}
+        </div>
+        <a href="/blog" class="to_page_list">ブログの記事一覧はこちら</a>
+      </div>
     </div>
-    <a href="/blog" class="to_page_list">ブログの記事一覧はこちら</a>
+    <div class="column is-3 sidebar">
+      <section class="profile">
+        <h2 class="title">かいているひと</h2>
+        <div class="user_image">
+          <img class="user" src="https://avatars1.githubusercontent.com/u/6788936?v=4">
+        </div>
+        <h1>愛知県東三河でWEB開発・ホームページ制作をしている<a href="/about">@t4traw</a>のブログです。</h1>
+        <h2>技術相談・制作依頼は気軽に<a href="/contact">お問い合わせページからどうぞ</a> :)</h2>
+      </section>
+      <section class="categories">
+        <h2 class="title">かてごりー</h2>
+        <ul>
+          {{ range $.Site.Taxonomies.categories.ByCount }}
+            <li><a href="{{ $.Site.BaseURL }}categories/{{ .Name | urlize | lower }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </section>
+    </div>
   </div>
+
 </div>
 {{ end }}

@@ -20,13 +20,7 @@ header {
   // display: flex/
   // justify-content: space-between
   .logo {
-    width: $header_height + 1rem;
-    height: $header_height + 1rem;
-
-    @media screen and (max-width: $smartphone_width) {
-      width: $header_height;
-      height: $header_height;
-    }
+    width: 11.2rem;
 
     svg {
       width: auto;

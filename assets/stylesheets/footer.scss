@@ -1,4 +1,27 @@
 footer {
-  margin-top: 100px;
-  background-color: $gray_color;
+  background-color: darken($color: $gray_color, $amount: 10);
+  &:last-of-type {
+    padding-bottom: 4rem;
+  }
+}
+
+.footer {
+  padding: 3rem 1.5rem 1rem;
+}
+
+
+.is-tag {
+  ul {
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.is-archive {
+  ul {
+    li {
+      display: inline-block;
+    }
+  }
 }

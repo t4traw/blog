@@ -1,41 +1,15 @@
 #welcome {
-
-  h1,
-  h2 {
-    padding: 10px;
-    margin: 0;
-    text-align: center;
+  .ads {
+    margin-bottom: 3rem;
   }
 
-  .first_view {
-    max-width: 1120px;
-    margin: 5rem 0 8rem;
-
-    .first_message {
-      background: -webkit-linear-gradient(20deg, $red_color, $yellow_color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: calc(3em - 4vw);
-      font-family: serif;
-
-      @media screen and (min-width: 769px) {
-        font-size: 3.6em;
+  .categories {
+    ul {
+      li {
+        border-bottom: 1px dotted $gray_color;
       }
-
-      font-weight: 200;
-
-      // width: 90%
-      margin: 0 auto;
-      margin-top: 50px;
-      text-align: center;
     }
   }
-}
-
-section {
-  width: 85vw;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .card {
