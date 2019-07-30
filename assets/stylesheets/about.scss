@@ -10,6 +10,25 @@
   }
 
   .user_bio {
+    .user_image {
+      position: relative;
+      #lets_be_friends {
+        span {
+          height: 100px;
+          width: 0;
+          top: -20px;
+          position: absolute;
+          transform-origin: bottom center;
+          font-size: 14px;
+        }
+        @for $i from 0 through 20 {
+          span:nth-child(#{$i + 1}) {
+            transform: rotate(#{$i * 10 - 60}deg)
+          }
+        }
+      }
+
+    }
     .name {
       text-align: left;
       padding: 0;
