@@ -1,7 +1,7 @@
 ---
 title: {{ dateFormat "2006年1月2日" .Date }}の気になったものまとめ
 date: {{ .Date }}
-archives: [{{ dateFormat "2006/01" .Date }}]
+archives: [\"{{ dateFormat "2006/01" .Date }}\"]
 categories:
   - まとめ
 tags:
