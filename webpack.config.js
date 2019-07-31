@@ -32,12 +32,15 @@ function collectWhitelist() {
     'is-active',
     'tcg-card',
     'blockquote',
+    'highlight',
+    'chroma',
   ]
 }
 
 function collectWhitelistPatterns() {
   return [
-    /^ptcg-e/
+    /^ptcg-e/,
+    /language-/,
   ]
 }
 
