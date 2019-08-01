@@ -50,7 +50,10 @@ strong {
 }
 
 .main_container {
-  margin: 0 auto 100px;
+  margin: 0 auto 0;
+  @media screen and (min-width: $tablet_width + 1px) {
+    margin: 0 auto 100px;
+  }
   padding: 0 20px;
   width: 100%;
   max-width: $pc_width;

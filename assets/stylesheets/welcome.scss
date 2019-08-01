@@ -5,7 +5,17 @@
 
   .categories {
     ul {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-content: stretch;
       li {
+        width: 50%;
+        flex-grow: 0;
+        flex-shrink: 2;
+        flex-basis: auto;
         border-bottom: 1px dotted $gray_color;
       }
     }
