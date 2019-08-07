@@ -41,6 +41,7 @@ function collectWhitelistPatterns() {
   return [
     /^ptcg-e/,
     /language-/,
+    /balloon_/,
   ]
 }
 
