@@ -8,55 +8,49 @@
   .title {
     margin-bottom: 2rem;
   }
+  .name {
+    text-align: left;
+    padding: 0;
+    font-size: 1rem;
+    border-bottom: 1px dashed $gray_color;
+    margin-bottom: 2rem;
 
-  .user_bio {
-    .user_image {
-      position: relative;
-      #lets_be_friends {
-        span {
-          height: 100px;
-          width: 0;
-          top: -20px;
-          position: absolute;
-          transform-origin: bottom center;
-          font-size: 14px;
-        }
-        @for $i from 0 through 20 {
-          span:nth-child(#{$i + 1}) {
-            transform: rotate(#{$i * 10 - 60}deg)
-          }
-        }
-      }
-
-    }
-    .name {
-      text-align: left;
-      padding: 0;
-      font-size: 1rem;
-      border-bottom: 1px dashed $gray_color;
-      margin-bottom: 2rem;
-
-      span {
-        font-weight: bold;
-        font-size: 1.2rem;
-
-        &:after {
-          content: "|";
-          padding: 0 5px;
-          font-weight: normal;
-        }
-      }
-    }
-
-    .skill {
+    span {
       font-weight: bold;
-      margin: 1rem 0;
+      font-size: 1.2rem;
+
+      &:after {
+        content: "|";
+        padding: 0 5px;
+        font-weight: normal;
+      }
     }
+  }
+
+  .skill {
+    font-weight: bold;
+    margin: 1rem 0;
   }
 }
 
 .user_image {
   text-align: center;
+  position: relative;
+  #lets_be_friends {
+    span {
+      height: 90px;
+      width: 0;
+      top: -26px;
+      position: absolute;
+      transform-origin: bottom center;
+      font-size: 14px;
+    }
+    @for $i from 0 through 20 {
+      span:nth-child(#{$i + 1}) {
+        transform: rotate(#{$i * 10 - 60}deg)
+      }
+    }
+  }
   img {
     width: 120px;
     border-radius: 100%;
