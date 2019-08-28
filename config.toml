@@ -16,7 +16,7 @@ rssLimit = 15
 [taxonomies]
   category = "categories"
   tag = "tags"
-	archive = "archives"
+  archive = "archives"
 
 [permalinks]
   blog = "/:section/:year/:month/:title"
