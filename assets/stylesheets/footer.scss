@@ -10,18 +10,11 @@ footer {
 }
 
 
-.is-tag {
+.is-inline-block {
   ul {
     li {
       display: inline-block;
-    }
-  }
-}
-
-.is-archive {
-  ul {
-    li {
-      display: inline-block;
+      margin: 0;
     }
   }
 }
