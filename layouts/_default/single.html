@@ -23,6 +23,7 @@
     </div>
     {{ .Content }}
   </article>
+
   {{ $related := .Site.RegularPages.Related . | first 9 }}
   {{ with $related }}
   <div class="related_links">
