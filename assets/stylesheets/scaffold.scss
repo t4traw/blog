@@ -23,17 +23,6 @@ strong {
   padding: 4px 0;
 }
 
-ul, ol {
-  li {
-    margin-left: 2rem;
-  }
-}
-
-ul {
-  li {
-    list-style: circle;
-  }
-}
 
 @mixin background-gradation($angle: 20deg, $color-a: $brand_color, $color-b: 20%) {
   background: linear-gradient($angle, $color-a, $color-b);

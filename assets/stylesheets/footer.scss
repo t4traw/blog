@@ -3,6 +3,18 @@ footer {
   &:last-of-type {
     padding-bottom: 4rem;
   }
+
+  ul, ol {
+    li {
+      margin-left: 2rem;
+    }
+  }
+
+  ul {
+    li {
+      list-style: circle;
+    }
+  }
 }
 
 .footer {
