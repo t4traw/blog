@@ -4,7 +4,7 @@
       <div class="card-image">
         <figure class="image">
           {{ if .Params.Image }}
-            <img src="{{ .Params.Image }}">
+            <img src="{{ $.Site.BaseURL }}/images/{{ .Params.Image }}">
           {{ else }}
             {{ partial "blank.svg" .}}
           {{ end }}

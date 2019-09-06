@@ -3,7 +3,7 @@
     <h2 class="title">きーわーど</h2>
     <ul>
       {{ range first 50 $.Site.Taxonomies.tags.ByCount }}
-        <li><a href="{{ $.Site.BaseURL }}tags/{{ .Name | urlize | lower }}/">{{ .Name }}</a></li>
+        <li><a href="{{ $.Site.BaseURL }}/tags/{{ .Name | urlize | lower }}/">{{ .Name }}</a></li>
       {{ end }}
     </ul>
   </div>
