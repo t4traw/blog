@@ -6,7 +6,7 @@ categories:
   - まとめ
 tags:
   - 
-image: https://s3-ap-northeast-1.amazonaws.com/t4traw/ss/2018-12-14_17-12-35.png
+image: matome.png
 ---
 {{ dateFormat "2006年1月2日" .Date }}の気になったニュースやページ、動画やほしいものなどまとめ。
 
