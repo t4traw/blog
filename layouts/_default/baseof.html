@@ -5,9 +5,8 @@
     <title>{{ block "title" . }}
       {{ .Site.Title }}
     {{ end }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">{{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{{ $.Site.BaseURL }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <meta name="twitter:card" content="summary" />
     <meta name="og:title" content="{{ .Title }}" />
     <meta name="og:description" content="{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
