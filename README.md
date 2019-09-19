@@ -1,4 +1,6 @@
-# すきなものをすきといえるせかいにしたい
+# すきせか
+
+https://www.t4traw.net
 
 ## development
 
