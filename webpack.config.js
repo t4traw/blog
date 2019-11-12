@@ -34,6 +34,7 @@ function collectWhitelist() {
     'blockquote',
     'highlight',
     'chroma',
+    'amazfy',
   ]
 }
 
