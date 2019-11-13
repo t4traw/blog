@@ -237,7 +237,7 @@ article {
 
   .balloon_left {
     @include balloon_style();
-    $balloon_left_color: #ffe7d9;
+    $balloon_left_color: #fff0ce;
     $balloon_left_margin: 90px;
     background-color: $balloon_left_color;
     margin-right: $balloon_left_margin;
