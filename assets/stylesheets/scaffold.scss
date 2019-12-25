@@ -1,9 +1,56 @@
+@font-face {
+  font-family: 'Yu Gothic';
+  src: local('Yu Gothic Medium');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Yu Gothic';
+  src: local('Yu Gothic Medium');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Yu Gothic';
+  src: local('Yu Gothic Medium');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Yu Gothic';
+  src: local('Yu Gothic Medium');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Yu Gothic';
+  src: local('Yu Gothic Bold');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Regular');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue Regular');
+  font-weight: 200;
+}
+
 html {
   height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Yu Gothic', YuGothic, Verdana, Meiryo, 'M+ 1p',
+    sans-serif;
+}
+@media all and (-ms-high-contrast: none) {
+  html {
+    font-family: Verdana, Meiryo, sans-serif;
+  }
+}
+@media all and (-ms-high-contrast: active) {
+  html {
+    font-family: Verdana, Meiryo, sans-serif;
+  }
 }
 
 body {
-  font-family: $base_font_family;
   font-size: 1.2rem;
   height: 100%;
   display: flex;
@@ -22,7 +69,6 @@ strong {
   margin: 0 5px;
   padding: 4px 0;
 }
-
 
 @mixin background-gradation($angle: 20deg, $color-a: $brand_color, $color-b: 20%) {
   background: linear-gradient($angle, $color-a, $color-b);
@@ -70,6 +116,6 @@ strong {
   left: 0;
   z-index: 1;
   pointer-events: auto;
-  content: "";
+  content: '';
   background-color: rgba(0, 0, 0, 0);
 }
