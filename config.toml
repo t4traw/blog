@@ -1,6 +1,6 @@
 baseURL = "https://www.t4traw.net"
 languageCode = "ja-ja"
-title = "すきせか"
+title = "t4traw.net"
 canonifyURLs = false
 relativeURLs = true
 disableHugoGeneratorInject = true
