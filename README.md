@@ -7,7 +7,7 @@
 - [Hugo](https://gohugo.io/)
 - [Vercel](https://vercel.com/)
 
-## Build Setup
+## Commands
 
 ``` bash
 $ npm run install
