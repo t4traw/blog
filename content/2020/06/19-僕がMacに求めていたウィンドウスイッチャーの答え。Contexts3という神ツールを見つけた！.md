@@ -1,5 +1,5 @@
 ---
-title: 僕がMacに求めていたcmd+tab（ウィンドウスイッチャー）の答え。『Contexts3』という神ツールを見つけた！
+title: 僕がMacに求めていたウィンドウスイッチャーの答え。Contexts3という神ツールを見つけた！
 date: 2020-06-19
 archives: ["2020/06"]
 categories:
