@@ -9,6 +9,9 @@ pygmentsUseClasses = true
 pygmentsCodefences = true
 rssLimit = 15
 
+[Params]
+description = "ruby,rails,vueの事をはじめ、本や音楽のことを自由きままに書き残すブログです"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
