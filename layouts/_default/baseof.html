@@ -19,9 +19,7 @@
   </head>
   <body>
     {{ partial "header.html" . }}
-    <div class="main_container">
-      {{ block "main" . }}{{ end }}
-    </div>
+    {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}
   </body>
   <script src="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.js{{ else }}{{ index .Site.Data.manifest "bundle.js" | relURL }}{{ end }}"></script>
