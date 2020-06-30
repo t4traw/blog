@@ -1,12 +1,7 @@
-const webpack = require('webpack')
-const path = require("path")
-const glob = require('glob')
+const path = require('path')
 const CleanPlugin = require('clean-webpack-plugin')
 const shellPlugin = require('webpack-shell-plugin')
 const manifestPlugin = require('webpack-manifest-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
-const hugoSrc = path.resolve(__dirname, "site")
 
 function set() {
   switch (process.env.APP_ENV) {
@@ -25,76 +20,40 @@ function set() {
   }
 }
 
-function collectWhitelist() {
-  // do something to collect the whitelist
-  return [
-    'filename',
-    'is-active',
-    'tcg-card',
-    'blockquote',
-    'highlight',
-    'chroma',
-    'amazfy',
-  ]
-}
-
-function collectWhitelistPatterns() {
-  return [
-    /^ptcg-e/,
-    /language-/,
-    /balloon_/,
-  ]
-}
-
 module.exports = () => {
   var env = set()
-
   var config = {
     watch: env.watch,
-
     context: __dirname,
-
     resolve: {
       extensions: ['.js', '.sass', '.scss', '.css']
     },
-
     entry: {
-      bundle: path.resolve(__dirname, 'assets', 'javascripts', 'index.js'),
+      bundle: path.resolve(__dirname, 'assets', 'javascripts', 'index.js')
     },
-
     output: {
       path: path.resolve(__dirname, 'static'),
       filename: env.filename + '.js',
-      chunkFilename: '[id].chunk.js',
+      chunkFilename: '[id].chunk.js'
     },
-
     plugins: [
-      new CleanPlugin([
-        path.resolve(__dirname, 'public')
-      ]),
+      new CleanPlugin([path.resolve(__dirname, 'public')]),
       new shellPlugin({
         onBuildEnd: [env.command]
       }),
       new manifestPlugin({
-        fileName: '../data/manifest.json',
-      }),
-      new MiniCssExtractPlugin({
-        filename: "[name].css",
-      }),
-      new PurgecssPlugin({
-        paths: glob.sync(`${path.join(__dirname, '')}/**/*.html`, { nodir: true }),
-        whitelist: collectWhitelist,
-        whitelistPatterns: collectWhitelistPatterns
-      }),
+        fileName: '../data/manifest.json'
+      })
     ],
     module: {
-      rules: [{
-        test: /\.(css|scss|sass)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          {
-            loader: 'postcss-loader',
+      rules: [
+        {
+          test: /\.(css|scss|sass)$/,
+          use: [
+            'style-loader',
+            'css-loader',
+            {
+              loader: 'postcss-loader',
               options: {
                 sourceMap: true,
                 plugins: [
@@ -103,15 +62,15 @@ module.exports = () => {
                   }),
                   require('csswring')(),
                   require('cssnano')({
-                    preset: 'default',
-                  }),
-                  
+                    preset: 'default'
+                  })
                 ]
-              },
-          },
-          "sass-loader"
-        ]
-      }]
+              }
+            },
+            'sass-loader'
+          ]
+        }
+      ]
     }
   }
   return config

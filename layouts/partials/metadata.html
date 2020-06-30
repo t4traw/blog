@@ -1,0 +1,12 @@
+<div id="metadata">
+  <img class="avatar" src="https://avatars1.githubusercontent.com/u/6788936?v=4" />
+  <ul>
+    <li class="author_name">この記事を書いたひと: <a href="/about">@t4traw</a></li>
+    <li class="publish_date">投稿日: {{ dateFormat "2006年1月2日" .Date }}</li>
+    {{ with .Params.categories }}
+    <li class="category_list">カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</li>
+    {{ end }} {{ with .Params.tags }}
+    <li class="tag_list">タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</li>
+    {{ end }}
+  </ul>
+</div>

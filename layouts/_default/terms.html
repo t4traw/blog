@@ -1,9 +1,10 @@
 {{ define "main" }}
-  <h1 class="title">{{ .Title }}</h1>
+<h1>{{ .Title }}</h1>
+<ul class="flex_list">
   {{ range .Pages }}
-    <article>
-      <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
-      {{ .Content }}
-    </article>
-  {{ end }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ .Content }} {{ end }}
+</ul>
 {{ end }}

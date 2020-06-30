@@ -1,47 +1,46 @@
 {{ define "main" }}
-<div id="welcome" class="container">
-  <div class="columns">
-    <div class="column is-9">
-      <div class="ads">
-        <!-- index_header -->
-        <ins
-          class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-4542333975748705"
-          data-ad-slot="4114881003"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
-        <script>
-          ;(adsbygoogle = window.adsbygoogle || []).push({})
-        </script>
-      </div>
-      <div id="posts">
-        <div class="columns is-multiline">
-          {{ range where (.Paginator 9).Pages "Section" "blog" }} {{ .Render "pagelist" }} {{ end }}
-        </div>
-        <a href="/blog" class="to_page_list">ブログの記事一覧はこちら</a>
-      </div>
-    </div>
-    <div class="column is-3 sidebar">
-      <section class="profile">
-        <h2 class="title">かいているひと</h2>
-        <div class="user_image side_prof_img">
-          <p id="lets_be_friends">おともだちになりましょう！</p>
-          <img class="user" src="https://avatars1.githubusercontent.com/u/6788936?v=4" />
-        </div>
-        <h1>愛知県東三河でウェブエンジニア<a href="/about">@t4traw</a>のブログです。</h1>
-        <h2>技術相談・制作依頼は気軽に<a href="/contact">お問い合わせページからどうぞ</a> :)</h2>
-      </section>
-      <section class="categories">
-        <h2 class="title">かてごりー</h2>
-        <ul>
-          {{ range $.Site.Taxonomies.categories.ByCount }}
-          <li><a href="{{ $.Site.BaseURL }}/categories/{{ .Name | urlize | lower }}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-      </section>
-    </div>
-  </div>
-</div>
+<section id="profile">
+  <img class="avatar" src="https://avatars1.githubusercontent.com/u/6788936?v=4" />
+  <ul>
+    <li>
+      <h1>愛知県東三河のウェブエンジニア<a href="/about">t4traw</a>のブログです。</h1>
+    </li>
+    <li>
+      <h2>技術相談・制作依頼は気軽に<a href="https://twitter.com/t4traw">Twitter(@t4traw)</a>までどうぞ</a>😃</h2>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>最新の記事</h2>
+  <ul class="posts">
+    {{ range first 20 .Site.RegularPages.ByDate.Reverse }}
+    <li><a href="{{.Permalink}}">{{ .Title }}</a><time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006/01/02"}}</time></li>
+    {{ end }}
+  </ul>
+</section>
+
+<section>
+  <h2>人気のおすすめ記事</h2>
+  <ol class="posts">
+    <li>
+      <a href="/2018/12/03/">Java Siluro2 2018を購入。ついにロードバイク乗りになりました。</a>
+    </li>
+    <li>
+      <a href="/2020/03/23-家のwi-fiをdeco-m4でメッシュwi-fi化してみた/">家のWi-FiをDeco M4でメッシュWi-Fi化してみた</a>
+    </li>
+    <li>
+      <a href="/2019/07/16-092839/">Let's Encryptで証明書の更新コマンド(certbot renew)でエラーが出た時の対処方法</a>
+    </li>
+    <li>
+      <a href="/2018/09/11/">ActiveJob, sidekiq, sidekiq-schedulerを使ってRailsで定期処理</a>
+    </li>
+    <li>
+      <a href="/blog/2019/04/ターミナルをiterm2からhyperに変更しました/">ターミナルをiterm2からhyperに変更しました</a>
+    </li>
+  </ol>
+</section>
+
+<!-- <a href="/blog" class="to_page_list">ブログの記事一覧はこちら</a> -->
+
 {{ end }}

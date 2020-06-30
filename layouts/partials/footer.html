@@ -1,37 +1,17 @@
-<footer class="footer is-inline-block">
-  <div class="container">
-    <h2 class="title">きーわーど</h2>
-    <ul>
-      {{ range first 50 $.Site.Taxonomies.tags.ByCount }}
-        <li><a href="{{ $.Site.BaseURL }}/tags/{{ .Name | urlize | lower }}/">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </div>
-</footer>
+<section class="categories">
+  <h2>カテゴリー</h2>
+  <ul class="flex_list">
+    {{ range $.Site.Taxonomies.categories.ByCount }}
+    <li><a href="{{ $.Site.BaseURL }}/categories/{{ .Name | urlize | lower }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-archive">
-        <h2 class="title">おすすめ</h2>
-        <ol>
-          <li><a href="/blog/2018/01/2018年1月31日現在のminecraftpeサーバーの建て方/">2018年1月31日現在のminecraftpeサーバーの建て方</a></li>
-          <li><a href="/blog/2019/03/gxスタートデッキ-メタグロスを強くする/">gxスタートデッキ-メタグロスを強くする</a></li>
-          <li><a href="/blog/2019/03/electronでアプリケーションを一つ作った時のメモ/">electronでアプリケーションを一つ作った時のメモ</a></li>
-          <li><a href="/blog/2019/04/ターミナルをiterm2からhyperに変更しました/">ターミナルをiterm2からhyperに変更しました</a></li>
-          <li><a href="/blog/2018/12/java-siluro2-2018を購入ついにロードバイク乗りになりました/">java-siluro2-2018を購入ついにロードバイク乗りになりました</a></li>
-          <li><a href="/blog/2019/08/夏休み豪華版ガルーラタッグバトル再度参加しました/">夏休み豪華版ガルーラタッグバトル再度参加しました</a></li>
-        </ol>
-      </div>
-      <div class="column">
-        <h2 class="title">ぺーじ</h2>
-        <ul>
-          <li><a href="/about">あばうと</a></li>
-          <li><a href="/contact">おといあわせ</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
+<section>
+  <h2>キーワード</h2>
+  <ul class="flex_list">
+    {{ range first 50 $.Site.Taxonomies.tags.ByCount }}
+    <li><a href="{{ $.Site.BaseURL }}/tags/{{ .Name | urlize | lower }}/">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</section>

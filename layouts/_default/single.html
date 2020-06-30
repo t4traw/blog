@@ -1,36 +1,21 @@
-{{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
-{{ define "main" }}
+{{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }} {{ define "main" }}
 <div class="single">
   <article class="article">
-    {{ if .Params.Image }}
-      <img src="{{ $.Site.BaseURL }}/images/{{ .Params.Image }}">
-    {{ else }}
-      {{ partial "blank.svg" .}}
-    {{ end }}
-    <h1 class="title">{{ .Title }}</h1>
-    <div class="author columns is-vcentered is-mobile">
-      <div class="column is-narrow">
-        <img class="user" src="https://avatars1.githubusercontent.com/u/6788936?v=4">
-      </div>
-      <div class="column">
-        <span class="author_name">この記事を書いたひと: <a href="/about">@t4traw</a></span>
-        <span class="publish_date">{{ dateFormat "2006年1月2日" .Date }}</span>
-        <ul class="post_meta_data">
-          {{ with .Params.categories }}<li class="category_list">カテゴリー:{{ range . }} <a href="/categories/{{ . | urlize }}/">{{ . }}</a>{{ end }}</li>{{ end }}
-          {{ with .Params.tags }}<li class="tag_list">タグ:{{ range . }} <a href="/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</li>{{ end }}
-        </ul>
-      </div>
-    </div>
-    {{ .Content }}
+    {{ if .Params.Image }}<img src="{{ $.Site.BaseURL }}{{ .Params.Image }}" />{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ .Content }} {{ partial "metadata.html" . }}
   </article>
 
-  {{ $related := .Site.RegularPages.Related . | first 9 }}
-  {{ with $related }}
+  {{ $related := .Site.RegularPages.Related . | first 9 }} {{ with $related }}
   <div class="related_links">
     <h3 class="title">こちらの記事もどうぞ 🤲</h3>
     <div class="columns is-multiline">
       {{ range . }}
-        {{ .Render "pagelist" }}
+      <ul class="posts">
+        <a href="{{.Permalink}}">
+          <li>{{ .Title }}</li>
+        </a>
+      </ul>
       {{ end }}
     </div>
   </div>

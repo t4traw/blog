@@ -1,0 +1,27 @@
+#profile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  background: var(--nc-bg-2);
+  padding: 1rem;
+  ul {
+    margin: 0;
+    padding: 0.5rem 0;
+    li {
+      margin: 0.4rem 0;
+      list-style: none;
+
+      h1,
+      h2,
+      h3 {
+        font-size: 100%;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

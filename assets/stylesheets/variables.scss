@@ -1,3 +1,5 @@
+$base_fontsize: 1rem;
+
 $red_color: #ff5746;
 $pink_color: #ff8874;
 $blue_color: #94d8ff;
@@ -6,14 +8,3 @@ $green_color: #17dbd6;
 $yellow_color: #fff8c6;
 $gray_color: #cccccb;
 $black_color: #424242;
-
-$brand_color: $blue_color;
-$brand_grad: linear-gradient(20deg, $brand_color, adjust-hue($brand_color, 20%));
-
-$link_color: #285dff;
-
-$pc_width: 1280px;
-$tablet_width: 620px;
-$smartphone_width: 414px;
-
-$base_font_size: 20px;
