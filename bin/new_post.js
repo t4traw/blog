@@ -17,6 +17,10 @@ image: /images/
 ---
 `
 
+if (!fs.existsSync(genPath)) {
+  fs.mkdirSync(genPath)
+}
+
 fs.writeFile(`${genPath}/${fileName}`, frontMatter, (err, data) => {
   if (err) console.log(err)
   else console.log('generated')
