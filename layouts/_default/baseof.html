@@ -22,5 +22,13 @@
     {{ partial "footer.html" . }}
     <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
   </body>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149611831-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-149611831-1');
+  </script>
   <script src="{{ .Site.BaseURL }}{{ if eq (getenv "APP_ENV") "dev" }}bundle.js{{ else }}{{ index .Site.Data.manifest "bundle.js" | relURL }}{{ end }}"></script>
 </html>
