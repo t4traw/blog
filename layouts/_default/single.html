@@ -10,13 +10,13 @@
   <div class="related_links">
     <h3 class="title">こちらの記事もどうぞ 🤲</h3>
     <div class="columns is-multiline">
-      {{ range . }}
       <ul class="posts">
+        {{ range . }}
         <a href="{{.Permalink}}">
           <li>{{ .Title }}</li>
         </a>
+        {{ end }}
       </ul>
-      {{ end }}
     </div>
   </div>
   {{ end }}
