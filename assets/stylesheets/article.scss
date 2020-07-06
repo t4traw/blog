@@ -46,15 +46,9 @@ article {
 
   p {
     margin-bottom: 2rem;
-  }
-
-  img {
-    border: 1px solid #eee;
-  }
-
-  .post-body {
-    > img {
-      margin: 2rem auto;
+    img {
+      border: 1px solid #eee;
+      margin: 0 auto;
     }
   }
 
