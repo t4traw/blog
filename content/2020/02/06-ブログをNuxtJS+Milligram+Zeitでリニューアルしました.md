@@ -1,5 +1,5 @@
 ---
-title: ブログをNuxtJS+Milligram+Zeitでリニューアルしました
+title: ブログをNuxtJS/Milligram/Zeitでリニューアルしました
 date: 2020-02-06
 archives: ["2020/02"]
 categories:
