@@ -88,14 +88,17 @@ article {
 
   .amazfy {
     text-align: center;
-    margin: 3rem 0;
+    margin: 3rem auto;
+    max-width: 300px;
     p {
       margin: 0;
+      text-align: center;
     }
     a {
       img {
         filter: none;
         margin: 0 auto;
+        height: 12rem;
       }
     }
   }
