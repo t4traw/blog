@@ -8,6 +8,7 @@ article {
     @include base_title_style();
     @include font-size($base_fontsize * 1.8);
     line-height: 1.2;
+
     &.title {
       margin-top: 0.2rem;
       margin-bottom: 0.5rem;
@@ -46,6 +47,7 @@ article {
 
   p {
     margin-bottom: 2rem;
+
     img {
       border: 1px solid #eee;
       margin: 0 auto;
@@ -55,6 +57,7 @@ article {
   ul,
   ol {
     margin-left: $base_fontsize + 0.5rem;
+
     li {
       list-style-position: outside;
     }
@@ -64,6 +67,7 @@ article {
     p {
       margin: 0;
     }
+
     cite {
       font-size: 0.8rem;
     }
@@ -80,6 +84,7 @@ article {
     color: #678e75;
     display: inline-block;
     font-family: monospace;
+
     &:before {
       content: '📝';
       margin-right: 0.5rem;
@@ -90,16 +95,28 @@ article {
     text-align: center;
     margin: 3rem auto;
     max-width: 300px;
+
     p {
       margin: 0;
       text-align: center;
     }
+
     a {
       img {
         filter: none;
         margin: 0 auto;
         height: 12rem;
       }
+    }
+  }
+
+  .follow-up {
+    background-color: #ffeebe;
+    padding: 1rem;
+    margin: 3rem 0;
+
+    p {
+      margin: 0;
     }
   }
 }
