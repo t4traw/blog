@@ -1,6 +1,6 @@
 ---
 title: WordPressで記事を更新したらGitHub Actionsにdispatchを送って、NuxtJSをビルドしてFirebaseにデプロイする
-date: 2021-02-03
+date: 2021-02-22
 archives: ["2021/02"]
 categories:
   - 開発
