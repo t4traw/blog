@@ -1,0 +1,151 @@
+@import '../node_modules/rfs/scss';
+
+$base_fontsize: 1.25rem;
+$black_color: #464646;
+$blue_color: #3b82f6;
+$gray_color: #efefef;
+
+article {
+  @mixin base_title_style {
+    font-weight: bold;
+    margin: 3rem 0;
+  }
+
+  * {
+    color: $black_color;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include base_title_style;
+  }
+
+  h1 {
+    @include font-size($base_fontsize * 2);
+
+    &.title {
+      margin-bottom: 3rem;
+    }
+  }
+
+  h2 {
+    @include font-size($base_fontsize * 1.5);
+  }
+
+  h3 {
+    @include font-size($base_fontsize * 1.25);
+  }
+
+  h4 {
+    @include font-size($base_fontsize * 1.25);
+  }
+
+  h5 {
+    @include font-size($base_fontsize * 1.25);
+  }
+
+  h6 {
+    @include font-size($base_fontsize * 1.25);
+  }
+
+  p {
+    @include font-size($base_fontsize);
+    margin: 3rem 0;
+
+    img {
+      border: 1px solid #eee;
+      margin: 0 auto;
+    }
+
+    code {
+      background: $gray_color;
+      border: 1px solid darken($color: $gray_color, $amount: 6);
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: .9rem;
+      vertical-align: text-bottom;
+    }
+  }
+
+  ul,
+  ol {
+    margin-left: $base_fontsize + 0.5rem;
+
+    li {
+      @include font-size($base_fontsize);
+      list-style-position: outside;
+      list-style-type: disc;
+    }
+  }
+
+
+  a {
+    color: $blue_color;
+    text-decoration: underline;
+  }
+
+  blockquote {
+    background-color: $gray_color;
+    padding: 1rem;
+    border-left: 5px solid darken($color: $gray_color, $amount: 10);
+
+    p {
+      margin: 0;
+    }
+
+    cite {
+      font-size: 0.8rem;
+    }
+  }
+
+  iframe {
+    width: 100% !important;
+  }
+
+  .filename {
+    margin: 0;
+    padding: 0 10px 0 0;
+    font-size: 18px;
+    color: #3c3c3c;
+    display: inline-block;
+    font-family: monospace;
+
+    &:before {
+      content: '📝';
+      margin-right: 0.5rem;
+    }
+  }
+
+  .amazfy {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 300px;
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    a {
+      img {
+        filter: none;
+        margin: 0 auto;
+        height: 12rem;
+      }
+    }
+  }
+
+  .follow-up {
+    background-color: #ffeebe;
+    padding: 1rem;
+    margin: 3rem 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
