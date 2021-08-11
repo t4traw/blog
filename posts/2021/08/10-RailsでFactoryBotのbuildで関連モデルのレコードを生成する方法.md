@@ -93,8 +93,14 @@ end
 
 まず一括でbuild時に生成する場合ですが、`FactoryBot.use_parent_strategy = false`を必要なところで設定すれば、build時でも関連レコードが生成されます。
 
+※追記: これ、書いた後のFactoryBotすべてに適用されてしまうので、teardownで戻しておいてあげる必要があります😓
+
 ```ruby
 class UserTest < ActiveSupport::TestCase
+  teardown do
+    FactoryBot.use_parent_strategy = true
+  end
+
   test "Userのレコードが生成できる" do
     FactoryBot.use_parent_strategy = false
     user = FactoryBot.build(:user)
