@@ -124,7 +124,7 @@ FactoryBot.define do
 end
 ```
 
-ただ、これは簡単に変えられないので、データの保存自体をテストする時だけ、上の`FactoryBot.use_parent_strategy = false`の方が良いかもしれませんね😆
+ただ、これは簡単に変えられないので、レコードの保存自体をテストする時だけ、上の`FactoryBot.use_parent_strategy = false`の方が良いかもしれませんね😆
 
 それでは🤟
 
