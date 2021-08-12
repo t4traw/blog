@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 const About = ({ title, description, ...props }) => {
   return (
     <>
-      <Layout pageTitle={`${title} | About`} description={description}>
+      <Layout pageTitle={`Tatsuro Moriyama | ${title}`} description={description}>
         <article>
           <h1>Tatsuro Moriyama</h1>
           <p>WEBエンジニア・WEBデザイナー</p>
@@ -37,14 +37,14 @@ const About = ({ title, description, ...props }) => {
           </ul>
           <p>
             ↑のキーワードが好きな方はぜひ
-            <a href="https://twitter.com/t4traw" target="_blank">Twitter(@t4traw)</a>でフォローをしてください！
+            <a href="https://twitter.com/t4traw" target="_blank">Twitter(@t4traw)</a>のフォローをしてください！
           </p>
           <h2>Dev</h2>
           <ul>
-            <li>CSS(sass)</li>
+            <li>CSS(Sass)</li>
             <li>Ruby(Rails, Sinatra, Middleman)</li>
-            <li>JavaScript(VueJS, NuxtJS, Electron)</li>
-            <li>Server(Linux, Heroku, Vercel)</li>
+            <li>JavaScript(VueJS/NuxtJS, Electron)</li>
+            <li>Server(Linux, Heroku, Netlify, Vercel)</li>
             <li>AWS(Lambda, S3, ElasticTranscoder)</li>
             <li>Illustrator</li>
             <li>Photoshop</li>
