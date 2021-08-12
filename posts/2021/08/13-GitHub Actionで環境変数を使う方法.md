@@ -20,9 +20,9 @@ Firebaseなどのinit時にサクっと作ってくれるし、configも分か�
 
 ![](/images/2021-08-13_01-55-33.png)
 
-で、このままではGitHub Actionでは使えません😂
+で、このままではGitHub Actionで使えません😂
 
-ymlファイルで呼び出してあげる必要があります。例えばFOO_BAR_KEYという環境変数で、Secretsにも同様の変数名で登録した場合
+ymlファイルで呼び出してあげる必要があります。たとえばFOO_BAR_KEYという環境変数で、Secretsにも同様の変数名で登録した場合
 
 ```yml
       - name: Run test
