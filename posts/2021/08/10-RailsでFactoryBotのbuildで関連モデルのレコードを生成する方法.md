@@ -50,7 +50,7 @@ FactoryBot.define do
     name { Faker::Internet.username }
     email { Faker::Internet.email }
     password { 'password' }
-    assosiation :group
+    association :group
   end
 end
 
@@ -111,7 +111,7 @@ end
 
 ## 個別にbuild時でも生成されるように設定する
 
-factoryファイルの方でassosiationを設定した時に、buildでも生成するようにしておく事もできます。
+factoryファイルの方でassociationを設定した時に、buildでも生成するようにしておく事もできます。
 
 ```ruby
 FactoryBot.define do
@@ -119,7 +119,7 @@ FactoryBot.define do
     name { Faker::Internet.username }
     email { Faker::Internet.email }
     password { 'password' }
-    assosiation :group, strategy: :create # <- ココ
+    association :group, strategy: :create # <- ココ
   end
 end
 ```
