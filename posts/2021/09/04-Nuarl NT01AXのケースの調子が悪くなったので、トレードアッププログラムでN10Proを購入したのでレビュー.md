@@ -50,6 +50,6 @@ Nuarl製品はやはりパッケージ素敵😌 先日購入したKeychronも�
 <div class="amazfy">
 <a href="https://www.amazon.co.jp/dp/B08HMP84C1?tag=t4traw-22">
 <img src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08HMP84C1&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=t4traw-22&language=ja_JP">
-<p>product_name</p>
+<p>【NUARL公式限定】N10 Pro アクティブ ノイズキャンセリング 完全ワイヤレス イヤホン (ブラックメタリック) + 専用ポーチ【 NUARL DRIVER [N10]v3 / 高音質HDSS/aptX AAC/外音取込 / IPX4耐水 / 連続7時間再生(最大30時間) / テレワーク WEB会議 ハンズフリー通話/iPhone Android 対応】</p>
 </a>
 </div>
