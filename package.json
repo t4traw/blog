@@ -23,12 +23,15 @@
     "rehype-raw": "^5.1.0"
   },
   "devDependencies": {
+    "@types/node": "^16.9.6",
+    "@types/react": "^17.0.24",
     "autoprefixer": "^10.3.1",
     "date-utils": "^1.2.21",
     "npm-check-updates": "^11.8.3",
     "postcss": "^8.3.6",
     "rfs": "^9.0.5",
     "sass": "^1.36.0",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "typescript": "^4.4.3"
   }
 }
