@@ -1,4 +1,4 @@
-import Layout from '../components/Layout'
+import Layout from '../components/Layout.tsx'
 
 const About = ({ title, description, ...props }) => {
   return (
@@ -9,13 +9,19 @@ const About = ({ title, description, ...props }) => {
           <p>WEBエンジニア・WEBデザイナー</p>
           <ul>
             <li>
-              <a href="https://twitter.com/t4traw" target="_blank" rel="noreferrer">Twitter</a>
+              <a href="https://twitter.com/t4traw" target="_blank" rel="noreferrer">
+                Twitter
+              </a>
             </li>
             <li>
-              <a href="https://github.com/t4traw" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://github.com/t4traw" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/t4trawm/" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://www.instagram.com/t4trawm/" target="_blank" rel="noreferrer">
+                Instagram
+              </a>
             </li>
           </ul>
           <p>1985年 愛知県豊橋市出身</p>
@@ -37,7 +43,10 @@ const About = ({ title, description, ...props }) => {
           </ul>
           <p>
             ↑のキーワードが好きな方はぜひ
-            <a href="https://twitter.com/t4traw" target="_blank">Twitter(@t4traw)</a>のフォローをしてください！
+            <a href="https://twitter.com/t4traw" target="_blank">
+              Twitter(@t4traw)
+            </a>
+            のフォローをしてください！
           </p>
           <h2>Dev</h2>
           <ul>
@@ -57,7 +66,7 @@ const About = ({ title, description, ...props }) => {
 
 export default About
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const configData = await import('../../siteconfig.json')
 
   return {
