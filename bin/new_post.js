@@ -1,5 +1,4 @@
-const fs = require('fs')
-require('date-utils')
+import fs from 'fs'
 
 const today = new Date()
 const genPath = `posts/${today.toFormat('YYYY/MM')}`

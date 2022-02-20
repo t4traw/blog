@@ -1,6 +1,38 @@
+import path from 'path'
+import fs from 'fs'
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
+import { GetStaticProps } from 'next'
+
+export const getStaticProps: GetStaticProps = async () => {
+  const configData = await import('../../siteconfig.json')
+
+  const posts = ((context) => {
+    const keys = context.keys()
+    const values = keys.reverse().map(context)
+
+    const data = keys.map((key, index) => {
+      const path = key.slice(2).slice(0, -3)
+      const value = values[index] as any
+      const document = matter(value.default)
+      return {
+        frontmatter: document.data,
+        markdownBody: document.content,
+        path
+      }
+    })
+    return data
+  })(require.context('../../posts', true, /\.md$/))
+
+  return {
+    props: {
+      posts,
+      title: configData.default.title,
+      description: configData.default.description
+    }
+  }
+}
 
 const Index = ({ posts, title, description, ...props }) => {
   return (
@@ -20,33 +52,3 @@ const Index = ({ posts, title, description, ...props }) => {
 }
 
 export default Index
-
-export async function getStaticProps() {
-  const configData = await import('../../siteconfig.json')
-
-  const posts = ((context) => {
-    const keys = context.keys()
-    const values = keys.reverse().map(context)
-
-    const data = keys.map((key, index) => {
-      // let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
-      const path = key.slice(2).slice(0, -3)
-      const value = values[index]
-      const document = matter(value.default)
-      return {
-        frontmatter: document.data,
-        markdownBody: document.content,
-        path
-      }
-    })
-    return data
-  })(require.context('../../posts', true, /\.md$/))
-
-  return {
-    props: {
-      posts,
-      title: configData.default.title,
-      description: configData.default.description
-    }
-  }
-}

@@ -4,5 +4,7 @@
     "titleBar.activeForeground": "#000000",
     "activityBar.background": "#277dff",
     "activityBar.foreground": "#000000"
-  }
+  },
+  "scss.validate": false,
+  "css.validate": false
 }

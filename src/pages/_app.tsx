@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css'
+import '../../styles/tailwind.css'
 import 'prismjs/themes/prism-tomorrow.css'
 import '../../styles/head.scss'
 import '../../styles/article.scss'
