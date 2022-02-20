@@ -1,36 +1,35 @@
 {
   "private": true,
   "scripts": {
-    "new": "npx tsx bin/new_post.js",
-    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "update": "npx npm-check-updates"
+    "start": "next start"
   },
   "dependencies": {
-    "babel-plugin-prismjs": "^2.1.0",
-    "glob": "^7.2.0",
-    "gray-matter": "^4.0.3",
-    "next": "^12.1.0",
-    "prismjs": "^1.27.0",
-    "raw-loader": "^4.0.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-markdown": "^8.0.0",
-    "react-syntax-highlighter": "^15.4.5",
-    "rehype-raw": "^6.1.1"
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.8",
-    "@types/node": "^17.0.18",
-    "@types/react": "^17.0.39",
-    "@types/webpack-env": "^1.16.3",
-    "autoprefixer": "^10.4.2",
+    "@types/node": "17.0.4",
+    "@types/react": "17.0.38",
+    "autoprefixer": "^10.4.0",
+    "babel-plugin-prismjs": "^2.1.0",
+    "glob": "^7.2.0",
+    "gray-matter": "^4.0.3",
     "npm-check-updates": "^12.3.1",
-    "postcss": "^8.4.6",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.1",
+    "prismjs": "^1.27.0",
+    "raw-loader": "^4.0.2",
+    "react-markdown": "^8.0.0",
+    "react-syntax-highlighter": "^15.4.5",
+    "rehype-raw": "^6.1.1",
     "rfs": "^9.0.6",
     "sass": "^1.49.8",
-    "tailwindcss": "^3.0.23",
-    "typescript": "^4.5.5"
+    "tailwindcss": "^3.0.7",
+    "typescript": "4.5.4"
   }
 }
