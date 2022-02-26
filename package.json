@@ -16,6 +16,7 @@
     "@types/prismjs": "^1.26.0",
     "@types/react": "17.0.38",
     "@types/react-syntax-highlighter": "^13.5.2",
+    "@types/webpack-env": "^1.16.3",
     "autoprefixer": "^10.4.0",
     "babel-plugin-prismjs": "^2.1.0",
     "glob": "^7.2.0",
