@@ -1,6 +1,19 @@
 import Link from 'next/link'
 
-export default function PostLink ({ posts }) {
+type Post = {
+  path: string
+  frontmatter: {
+    title: string
+    image: string
+    date: string
+  }
+}
+
+type Props = {
+  posts: Post[]
+}
+
+export default function PostList({ posts }: Props) {
   if (posts === void 0) return null
 
   return (

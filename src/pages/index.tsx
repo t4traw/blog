@@ -1,5 +1,3 @@
-import path from 'path'
-import fs from 'fs'
 import matter from 'gray-matter'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
@@ -36,17 +34,22 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const Index = ({ posts, title, description, ...props }) => {
   return (
-    <Layout pageTitle={title}>
-      <p className="pb-8">
-        このウェブサイトは
-        <a href="https://twitter.com/t4traw" target="_blank">
-          @t4traw
-        </a>
-        が日々勉強したプログラミングの事や、本・ゲーム・釣りなどの趣味に関する事を綴っているブログです。
-      </p>
-      <main>
-        <PostList posts={posts} />
-      </main>
+    <Layout
+      pageTitle={title}
+      description="このウェブサイトは@t4trawが日々勉強したプログラミングの事や、本・ゲーム・釣りなどの趣味に関する事を綴っているブログです。"
+    >
+      <>
+        <p className="pb-8">
+          このウェブサイトは
+          <a href="https://twitter.com/t4traw" target="_blank">
+            @t4traw
+          </a>
+          が日々勉強したプログラミングの事や、本・ゲーム・釣りなどの趣味に関する事を綴っているブログです。
+        </p>
+        <main>
+          <PostList posts={posts} />
+        </main>
+      </>
     </Layout>
   )
 }

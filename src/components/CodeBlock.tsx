@@ -25,8 +25,12 @@ SyntaxHighlighter.registerLanguage('bash', bash)
 SyntaxHighlighter.registerLanguage('markdown', markdown)
 SyntaxHighlighter.registerLanguage('ruby', ruby)
 
+type Props = {
+  language: string
+}
+
 // コードブロック
-const CodeBlock = ({ language }) => {
+const CodeBlock = ({ language }: Props) => {
   const codeString = '(num) => num + 1'
   return (
     <SyntaxHighlighter language={language} style={nord}>

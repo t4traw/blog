@@ -1,6 +1,22 @@
 import Layout from '../components/Layout'
 
-const About = ({ title, description, ...props }) => {
+export async function getStaticProps() {
+  const configData = await import('../../siteconfig.json')
+
+  return {
+    props: {
+      title: configData.default.title,
+      description: configData.default.description
+    }
+  }
+}
+
+type Props = {
+  title: string
+  description: string
+}
+
+const About = ({ title, description }: Props) => {
   return (
     <>
       <Layout pageTitle={`Tatsuro Moriyama | ${title}`} description={description}>
@@ -65,14 +81,3 @@ const About = ({ title, description, ...props }) => {
 }
 
 export default About
-
-export async function getStaticProps() {
-  const configData = await import('../../siteconfig.json')
-
-  return {
-    props: {
-      title: configData.default.title,
-      description: configData.default.description
-    }
-  }
-}
