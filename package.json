@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "new": "node bin/new_post.js"
   },
   "dependencies": {
     "next": "latest",
@@ -19,6 +20,7 @@
     "@types/webpack-env": "^1.16.3",
     "autoprefixer": "^10.4.0",
     "babel-plugin-prismjs": "^2.1.0",
+    "date-utils": "^1.2.21",
     "glob": "^7.2.0",
     "gray-matter": "^4.0.3",
     "npm-check-updates": "^12.3.1",
