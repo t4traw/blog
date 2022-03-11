@@ -31,8 +31,13 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+type Props = {
+  posts: BlogPost[]
+  title: string
+  description: string
+}
 
-const Index = ({ posts, title, description, ...props }) => {
+const Index = ({ posts, title }: Props) => {
   return (
     <Layout
       pageTitle={title}

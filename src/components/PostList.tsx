@@ -1,16 +1,7 @@
 import Link from 'next/link'
 
-type Post = {
-  path: string
-  frontmatter: {
-    title: string
-    image: string
-    date: string
-  }
-}
-
 type Props = {
-  posts: Post[]
+  posts: BlogPost[]
 }
 
 export default function PostList({ posts }: Props) {
