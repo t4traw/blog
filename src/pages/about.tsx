@@ -41,20 +41,17 @@ const About = ({ title, description }: Props) => {
             </li>
           </ul>
           <p>1985年 愛知県豊橋市出身</p>
-          <p>
-            地元の通販会社にWEBデザイナー・WEBエンジニアとして就職。フロントサイドから業務アプリケーションまで、いろいろ制作・開発してきました。なので、一般的なWEB制作会社とは少し違った、『ECに関連するお仕事』や『その会社ごとの特殊なケース・問題』を解決するのが得意です。そういった記事をブログに書いていきたいと思います。
-          </p>
+          <p>地元の通販会社にWEBデザイナー・WEBエンジニアとして、フロントエンドから業務アプリケーションまで経験。</p>
           <p>また、いつか学んだ知識や技術で人の役にたつ事ができたらいいなと、日々勉強しています。</p>
-          <h2>Favorite</h2>
+          <h2>すきなこと</h2>
           <ul>
             <li>音楽</li>
             <li>ウイスキー</li>
-            <li>プログラミング</li>
+            <li>珈琲</li>
             <li>ロードバイク</li>
             <li>キャンプ</li>
             <li>ビデオゲーム</li>
             <li>ドイツゲーム・アナログゲーム</li>
-            <li>珈琲</li>
             <li>本</li>
           </ul>
           <p>
@@ -62,13 +59,13 @@ const About = ({ title, description }: Props) => {
             <a href="https://twitter.com/t4traw" target="_blank">
               Twitter(@t4traw)
             </a>
-            のフォローをしてください！
+            のフォローをしてください🙆‍♂️
           </p>
-          <h2>Dev</h2>
+          <h2>開発</h2>
           <ul>
-            <li>CSS(Sass)</li>
-            <li>Ruby(Rails, Sinatra, Middleman)</li>
-            <li>JavaScript(VueJS/NuxtJS, Electron)</li>
+            <li>Ruby, Rails, Sinatra, Middleman</li>
+            <li>JavaScript, TypeScript, React.js, Next.js</li>
+            <li>CSS, Sass, Bulma, Tailwind.css</li>
             <li>Server(Linux, Heroku, Netlify, Vercel)</li>
             <li>AWS(Lambda, S3, ElasticTranscoder)</li>
             <li>Illustrator</li>
